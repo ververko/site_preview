@@ -2,8 +2,5 @@
 .~lock.*#
 *.tmp
 
-# Heavy raw media — not version-controlled, kept locally only
-web_protfolio_VRK/06_References & Assets/
-web_protfolio_VRK/before content 05/
-web_protfolio_VRK/05_Content Library/Lectures/*.pptx
-web_protfolio_VRK/05_Content Library/Notes&Ideas/Ideas Photos/*.mov
+# Working docs — not relevant to the live site yet, kept locally only
+web_protfolio_VRK/
