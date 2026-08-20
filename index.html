@@ -118,6 +118,8 @@
   .program-card .program-media img{filter:saturate(1.05) contrast(1.02);}
   .program-media.c-pink{background:var(--pink);}
   .program-media.c-violet{background:var(--violet);}
+  .program-media.c-cobalt{background:var(--cobalt);}
+  .program-card.wide{grid-column:1 / -1; aspect-ratio:21/9;}
   .card-scrim{
     position:absolute; inset:0; z-index:1;
     background:linear-gradient(0deg, rgba(15,20,36,.58) 0%, rgba(15,20,36,.32) 45%, rgba(15,20,36,.03) 75%);
@@ -131,6 +133,7 @@
   @media (max-width:880px){
     .programs-grid{grid-template-columns:1fr;}
     .program-card{aspect-ratio:1/1.05;}
+    .program-card.wide{aspect-ratio:1/1.05;}
     .card-content h3{font-size:26px;}
   }
 
@@ -183,6 +186,7 @@
       <a href="#programs">Programs</a>
       <a href="#highlights">Selected Work</a>
       <a href="writing.html">Writing</a>
+      <a href="the-art-circle.html">The Art Circle</a>
       <a class="btn" href="#contact">Contact</a>
     </div>
   </nav>
@@ -231,7 +235,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="chip">Areas of Practice</span>
-      <h2>Four ways to <span class="pink">work together</span></h2>
+      <h2>Five ways to <span class="pink">work together</span></h2>
     </div>
 
     <div class="programs-grid">
@@ -276,6 +280,16 @@
           <h3>Curatorial Projects</h3>
           <p>Exhibitions, festivals, and interdisciplinary cultural projects that bring together artistic inquiry, historical research, and public engagement.</p>
           <a class="link-arrow" href="#contact">Collaborate on a Project →</a>
+        </div>
+      </div>
+
+      <div class="program-card wide">
+        <div class="program-media placeholder c-cobalt"></div>
+        <div class="card-scrim light"></div>
+        <div class="card-content">
+          <h3>The Art Circle</h3>
+          <p>A structured educational journey in three parts — an independent study program moving through history, symbol, and practice. Currently in development.</p>
+          <a class="link-arrow" href="the-art-circle.html">Explore The Art Circle →</a>
         </div>
       </div>
     </div>
