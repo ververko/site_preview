@@ -52,7 +52,7 @@
   /* HERO — text left, larger edge-flush photo right, running text floats on the photo */
   .hero{background:var(--white); color:var(--navy); overflow:hidden;}
   .hero-split{display:grid; grid-template-columns:1fr 1.3fr; align-items:stretch; min-height:680px;}
-  .hero-copy{display:flex; flex-direction:column; justify-content:center; padding:64px 48px 64px 72px;}
+  .hero-copy{display:flex; flex-direction:column; justify-content:flex-start; padding:100px 48px 64px 72px;}
   .hero-copy h1{
     font-family:'Archivo', var(--sans); font-weight:300; font-style:normal; font-size:104px; line-height:.94;
     letter-spacing:-.02em; margin-bottom:24px; color:var(--navy);
@@ -69,18 +69,17 @@
   .hero-ctas .text-link:hover{opacity:.55;}
   .hero-ctas .text-link.pink{color:var(--pink); border-color:var(--pink);}
   .hero-photo{position:relative; overflow:hidden; background:var(--navy);}
-  .hero-photo img{object-position:center 20%; filter:grayscale(.2) contrast(1.03);}
+  .hero-photo img{object-position:center 4%; filter:grayscale(.2) contrast(1.03);}
   .hero-marquee{
-    position:absolute; left:0; right:0; bottom:0; z-index:2; overflow:hidden; white-space:nowrap;
-    padding:26px 0; border-top:1px solid rgba(255,255,255,.4);
-    background:linear-gradient(0deg, rgba(15,20,36,.6) 0%, rgba(15,20,36,0) 100%);
+    position:absolute; left:0; right:0; top:64px; z-index:2; overflow:hidden; white-space:nowrap;
+    padding:14px 0;
+    background:linear-gradient(0deg, rgba(15,20,36,0) 0%, rgba(15,20,36,.35) 50%, rgba(15,20,36,0) 100%);
   }
   .hero-marquee-track{display:inline-block; padding-left:100%; animation:scroll 34s linear infinite;}
   .hero-marquee span{
     font-family:'Archivo', var(--sans); font-size:17px; font-weight:400; font-style:italic; letter-spacing:.01em;
-    text-transform:uppercase; color:var(--white); margin:0 24px;
+    text-transform:uppercase; color:var(--white); margin:0 44px;
   }
-  .hero-marquee .sep{color:var(--pink); margin:0 24px; font-style:normal;}
 
   /* ABOUT — full-bleed photo background, mirrored from hero, text as floating glass blocks */
   .about-section{position:relative; background:var(--navy); min-height:820px; overflow:hidden;}
@@ -218,8 +217,8 @@
       <img src="assets/about-portrait.jpg" alt="Portrait of Vera Korman">
       <div class="hero-marquee">
         <div class="hero-marquee-track">
-          <span>Lectures</span><span class="sep">•</span><span>Art Walks Barcelona</span><span class="sep">•</span><span>Workshops</span><span class="sep">•</span><span>Curatorial Projects</span><span class="sep">•</span>
-          <span>Lectures</span><span class="sep">•</span><span>Art Walks Barcelona</span><span class="sep">•</span><span>Workshops</span><span class="sep">•</span><span>Curatorial Projects</span><span class="sep">•</span>
+          <span>Lectures</span><span>Art Walks Barcelona</span><span>Workshops</span><span>Curatorial Projects</span>
+          <span>Lectures</span><span>Art Walks Barcelona</span><span>Workshops</span><span>Curatorial Projects</span>
         </div>
       </div>
     </div>
