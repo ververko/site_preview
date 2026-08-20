@@ -93,6 +93,27 @@
   .circle-card h3{font-size:24px; color:var(--navy); margin-bottom:14px;}
   .circle-card p{font-size:15.5px; line-height:1.6; color:var(--navy-soft); margin-bottom:24px; flex-grow:1;}
 
+  /* ABOUT US — instructors */
+  .instructors{padding:110px 0;}
+  .instructors .section-head{max-width:680px; margin-bottom:56px;}
+  .instructors .chip{background:var(--violet); margin-bottom:14px;}
+  .instructors h2{font-size:38px; color:var(--navy);}
+  .instructors-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+  .instructor-card{display:flex; flex-direction:column;}
+  .instructor-photo{
+    aspect-ratio:1/1; border-radius:16px; overflow:hidden; margin-bottom:24px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-size:15px; font-weight:600; color:rgba(255,255,255,.8); text-align:center; padding:20px;
+  }
+  .instructor-card:nth-child(1) .instructor-photo{background:linear-gradient(135deg, var(--pink) 0%, var(--violet) 100%);}
+  .instructor-card:nth-child(2) .instructor-photo{background:linear-gradient(135deg, var(--cobalt) 0%, var(--green) 100%);}
+  .instructor-card h3{font-size:24px; color:var(--navy); margin-bottom:6px;}
+  .instructor-role{
+    display:block; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--violet); margin-bottom:16px;
+  }
+  .instructor-card p{font-size:16px; line-height:1.6; color:var(--navy-soft);}
+
   /* CLOSING */
   .closing{padding:110px 0; text-align:center; background:var(--navy); color:var(--white);}
   .closing .chip{background:var(--pink); margin-bottom:14px;}
@@ -112,7 +133,8 @@
     .circle-hero h1{font-size:38px;}
     .circle-hero .lede{font-size:18px;}
     .circles-grid{grid-template-columns:1fr;}
-    .about-course h2, .circles h2, .closing h2{font-size:28px;}
+    .instructors-grid{grid-template-columns:1fr;}
+    .about-course h2, .circles h2, .instructors h2, .closing h2{font-size:28px;}
     .footer-grid{grid-template-columns:1fr; gap:36px;}
     .navlinks{display:none;}
   }
@@ -158,6 +180,30 @@
     <p>[Placeholder — two or three sentences introducing the program as a whole: who it's for, what it moves through, and what makes it different from a standard course. Replace with your own text.]</p>
     <p>[Placeholder — a second paragraph, if needed, on format: how long it runs, how sessions are structured, in person or online, group size, prerequisites.]</p>
     <span class="placeholder-note">⚬ Placeholder text — send me the real copy and I'll drop it in here</span>
+  </div>
+</section>
+
+<section class="instructors">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="chip">About Us</span>
+      <h2>Your instructors</h2>
+    </div>
+    <div class="instructors-grid">
+      <div class="instructor-card">
+        <div class="instructor-photo">[Photo of Vera]</div>
+        <h3>Vera Korman</h3>
+        <span class="instructor-role">Curator &amp; Art Historian</span>
+        <p>[Placeholder — a short bio of Vera as co-instructor of The Art Circle: her angle on the program, relevant background.]</p>
+      </div>
+      <div class="instructor-card">
+        <div class="instructor-photo">[Photo of Michal]</div>
+        <h3>Michal [Last Name]</h3>
+        <span class="instructor-role">Co-Instructor</span>
+        <p>[Placeholder — a short bio of Michal: role, background, what she brings to The Art Circle.]</p>
+      </div>
+    </div>
+    <span class="placeholder-note">⚬ Placeholder — send me photos, Michal's last name, and both bios</span>
   </div>
 </section>
 
