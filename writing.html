@@ -59,6 +59,10 @@
   .post-body{font-size:18px; color:var(--navy-soft); max-width:640px;}
   .post-body p{margin-bottom:16px;}
   .post-body p:last-child{margin-bottom:0;}
+  .post-body h3{
+    font-family:var(--serif); font-size:22px; font-weight:600; color:var(--navy); margin:34px 0 14px 0;
+  }
+  .post-body img{margin:6px 0 22px 0; border-radius:10px;}
   .post-body code{
     background:#F1F2F7; padding:2px 6px; border-radius:4px; font-size:15px; color:var(--navy);
   }
@@ -108,11 +112,99 @@
   </div>
 </footer>
 
-<script src="posts.js"></script>
 <script>
+  // WRITING — add new posts here.
+  // Newest post goes at the TOP of this array (position 0).
+  // image is optional — leave it as "" if a post has no image.
+  // body accepts simple HTML: <p>, <h3>, <strong>, <em>, <a href="...">, <img>, <br> all work.
+  const POSTS = [
+    {
+      title: "When a Black Star Lands in Barcelona",
+      date: "2026-01-21",
+      image: "",
+      body: `
+        <p style="font-style:italic; color:rgba(74,85,112,.8);">The major Pan-Africa exhibition at MACBA</p>
+
+        <p>I have a special fondness for MACBA, perhaps because it never quite feels like a museum trying to detach itself from the city. Even before you step inside, the square in front of it is already alive: skaters, people sitting on the ground, kids sliding along the railings, black marks scored into the walls. A living space, unframed.</p>
+
+        <p>The building itself, a white modernist structure with sharp, slanted lines, sits in the heart of the Raval, among older buildings — some preserved and turned into museums, some abandoned, and some simply the loud, crowded Raval itself, full of life. The white façade, born from a modernist architectural ideal with a distinct political and historical charge, isn't kept pristine. It gets scratched, dirtied, absorbs marks. This is a white that wears down, not a white that's sanctified.</p>
+
+        <p>The feeling continues inside. At the entrance areas, at the information desks, there's no excess formality. The guards and staff speak at eye level, sometimes trading a personal word, sometimes a joke. The museum doesn't present itself as a sterile or elevated space, but as one in constant contact — not always comfortable — with whoever walks in. I remember my first months in Barcelona, wandering around alone with my young daughter, and she just wants to touch everything. The guard winks at her and says it's fine, just a little. What comfort there was in that, what a fleeting kinship between ordinary people in the face of art's sanctity — she, too, perhaps an immigrant, perhaps a student on a long shift.</p>
+
+        <p>Over the years, MACBA has held a consistent tension: between major names from the international field and artists working out of local context; between historical research and a living political stance. Not always, not in every exhibition, but often enough a clear spirit comes through. You could call it a Catalan spirit — not as nationalism but as a cultural position: skepticism toward centers, sensitivity to suppressed histories, and a willingness to make room for discomfort.</p>
+
+        <h3>Project a Black Planet: The Art and Culture of Panafrica</h3>
+
+        <p>And now, when visiting a contemporary museum has already become routine, I came to see the exhibitions that close one year and open the next. Usually this is an interesting, thought-provoking experience, but this time, in the museum's flagship show, something entirely different awaited me — something powerful and especially unsettling.</p>
+
+        <p>Project a Black Planet: The Art and Culture of Panafrica is the first major international exhibition to examine the cultural expressions of Pan-Africanism from the early 20th century to today. This is not a local exhibition, nor one meant simply to "present a topic." It's an ambitious attempt to map a cultural, political, and artistic movement across more than a century, from the first Pan-African Congress in 1919 to the present. An attempt that seeks not only to present history, but to challenge how history is written, collected, and displayed — and in that sense, it operates right at the heart of the museum's spirit.</p>
+
+        <p>The exhibition was co-curated by chief curator Elvira Dyangani Ose, director of MACBA, together with curators Antawan Byrd, Adom Getachew, and Matthew S. Witkovsky. The project was developed in partnership with the Art Institute of Chicago, the Barbican Centre in London, and KANAL – Centre Pompidou in Brussels, and will travel between the four institutions through spring 2027.</p>
+
+        <img src="assets/writing/panafrica-masks-installation.jpg" alt="Installation view of masks and sculptures at Project a Black Planet, MACBA">
+
+        <h3>A Space That Demands Time</h3>
+
+        <p>The exhibition presents Pan-Africa as an imagined space that exceeds national borders, where art and culture serve as tools for reckoning with the legacy of colonialism and for imagining a shared, just future. It includes roughly 500 works by around 100 artists from Africa and its diasporas, bringing together a wide range of mediums and formats in an equal dialogue, without hierarchies of place, time, or genre.</p>
+
+        <p>The exhibition asks a lot, in both words and images. Not a confusing overload, but an abundance: a richness that refuses to settle into a single reading. I read one wall text out of several, but quickly moved on to just looking. Where do you even begin with something like this? I tried to understand what I was seeing, in what context it was made, and how it all holds together.</p>
+
+        <p>It was already clear this wasn't just another impressive exhibition, but a singular case that refuses to close once you leave the space. Even its placement, on the second floor, in the large central hall, is a statement. A few weeks later I went back for a guided tour — not to "understand it all," but to hear how the thing is said out loud. The tour didn't close the experience; it deepened it.</p>
+
+        <h3>Three Spaces, Three Movements</h3>
+
+        <p>The curators don't offer a chronological route, but they do offer a way to walk it. The eye is guided through thematic spaces that organize the experience from within. The exhibition works as three main areas, each opening onto sub-spaces, moving gently between history, symbols, and personal experience.</p>
+
+        <h3>The First Space: History as Mechanism</h3>
+
+        <p>The first space is also the more historical one. It deals with the colonization of Africa, and above all with how it was explained, justified, and disseminated through Western systems of knowledge: maps, archives, photographs, ethnographic representations, philosophical texts. Here it becomes clear that "Africa" is not only a place but an idea — an image built as a kind of colonial library, presenting the continent as an empty space that could be filled, managed, and controlled.</p>
+
+        <p>Western philosophers, Hegel among them, argued that Africa had no history. That claim produced a primitivist image, and the divide it drew between "traditional" and "modern" continues to be reproduced today. But the exhibition doesn't stop there: it points to the moment when this knowledge was reclaimed by Africans and their descendants — not to adopt it, but to turn it on its head and open other paths for thinking about identity, liberation, and Pan-African solidarity.</p>
+
+        <p>Already at the entrance to the space, stability is unsettled. Contemporary artworks are placed alongside archival material and historical photographs, and the space is cut through with shelves holding sculptures that look like archaeological finds — but are, in fact, contemporary works. The boundaries between past and present blur, between museum object and living thing, opening the question of how history gets packaged as knowledge, and who gets included in it.</p>
+
+        <p>Among the sequence of works, Ingrid Mwangi and Robert Hutter's <em>Static Drift</em> (2010) stands out. On the skin of Mwangi's body, maps of Germany and of Africa were burned in, appearing like birthmarks. Over Germany the words "burn out country" appear; over Africa, "bright dark continent." The body becomes a surface onto which histories of power, belonging, and exploitation are inscribed.</p>
+
+        <p>Another work, quiet and minimal, is John Stollmeyer's <em>A Caribbean Basin</em> (1982): a rusted metal bowl, perforated with the outlines of Cuba, Grenada, and Nicaragua — three countries that underwent socialist revolutions that stirred broad regional hope, but also led to boycott and economic exclusion by the United States. The simple, damaged material holds a quiet but precise protest. These are just a few points of contact within a broad, dense sequence of works and materials that fill the space.</p>
+
+        <img src="assets/writing/panafrica-static-drift.jpg" alt="Static Drift by Ingrid Mwangi and Robert Hutter, two photographs of a torso with continent-shaped markings">
+
+        <h3>The Second Space: Flag, Journey, Future</h3>
+
+        <p>Entering the second space, more colorful and vibrant, it becomes immediately clear that this is a space concerned with the Pan-African idea and with the flag as a central symbol. The Pan-African flag — red, black, and green — recurs here again and again: red marking shared blood, black the community and its right to sovereignty and self-determination, and green the fertile soil of Africa. Unlike national flags, this is a portable flag, a symbol of solidarity crossing state borders, and one that also recalls the violence by which those borders were drawn.</p>
+
+        <p>In this space the flag is not only a symbol but a starting point for rethinking. Working from a critique of Western conceptions of time, the works turn toward myths, journeys, and imagined futures, sometimes reaching even beyond planet Earth. The video works offer possible articulations of the future: visions of a Pan-African utopia, at once speculative and political.</p>
+
+        <p>Other works extend the discourse to queer activisms as well, offering a conception of belonging, interdependence, and shared humanity.</p>
+
+        <img src="assets/writing/panafrica-rubber-sculpture.jpg" alt="Sculpture made of stitched black rubber inner tubes, installed in the gallery">
+        <img src="assets/writing/panafrica-kanga-textiles.jpg" alt="Wall of printed Pan-African kanga textiles in red, black, yellow and green">
+
+        <h3>The Final Space: Multiplicity, Discomfort, Identity</h3>
+
+        <p>This is the exhibition's final space, and also its most expansive and dense. A central space from which small spaces branch off, sub-spaces with different themes, all tied to one broad and especially personal theme. It is also the largest space, and the most subjective and difficult to absorb.</p>
+
+        <p>Dozens of works, a multiplicity of voices and mediums. A visual and conceptual celebration featuring works by major artists including Marlene Dumas, Chris Ofili, Kerry James Marshall, and Samuel Fosso. In his iconic work, Fosso embodies an African "chief" figure, a play on identity that critiques African elites who collaborated with colonialism, through an image that is ostentatious, ironic, and painful. Alongside these works unfolds a broad sequence of personal, bodily, and political responses to the question of what blackness is and what it means to be Black — a sequence that emphasizes multiplicity rather than uniformity, leaving the viewer in an ongoing state of questioning and thought.</p>
+
+        <p>At the center of the space sit two open pavilions, islands of gathering. You can sit, listen, watch, and look through archival materials: personal stories, recordings, magazines, books, and research. Together they emphasize that Blackness is not a fixed identity or a single essence, but a fluid, dynamic concept — one shaped by history, but also by lived, subjective experience.</p>
+
+        <p>Among the dozens of works, a small, almost hidden painting catches the eye. At first glance it seems familiar, Western-expressionist. I move closer, and its power becomes clear immediately. This is <em>Agony</em> by Colette Omogbai, one of the pioneers of postcolonial modernism in Nigeria. A fragmented, contorted body, intense color against a dark, dense background. It's a powerful work that points sharply to the way African art profoundly influenced modern Western art — an influence that has often been erased or absorbed into the official story of art history.</p>
+
+        <p>And finally, through a work by a white, international artist, the exhibition returns to its core question. Marlene Dumas's painting <em>Albino</em> depicts a Black African person with albinism. The enigmatic gaze and the ghostly skin tone, against a deep, dark background, produce a sense of isolation and alienation. It's a painting that carries a broad discussion of the body as a generator of identity, and of how art can unsettle racial distinctions without offering an easy resolution.</p>
+
+        <p>The choice to place this painting on a central wall doesn't close the exhibition, but leaves it open: a complex, critical, multivocal discussion that doesn't converge on a single statement. An exhibition that asks the viewer to stay, to get entangled, and to hold discomfort as a position.</p>
+
+        <p>So yes, go see it. Give yourself time, and maybe even more than one visit. The exhibition is on view at MACBA, and on Saturday afternoons admission is free — a rare invitation to meet an exhibition that isn't in a hurry to let you go.</p>
+
+        <img src="assets/writing/panafrica-albino-dumas.jpg" alt="Albino by Marlene Dumas, a painting of a Black African person with albinism">
+        <img src="assets/writing/panafrica-pressure-cooker.jpg" alt="Sculpture of a pressure cooker with the world map cut out of its yellow surface">
+      `
+    },
+  ];
+
   const feed = document.getElementById('feed');
 
-  if (!window.POSTS || POSTS.length === 0) {
+  if (typeof POSTS === 'undefined' || POSTS.length === 0) {
     feed.innerHTML = '<p class="empty">Nothing published yet — check back soon.</p>';
   } else {
     feed.innerHTML = POSTS.map(post => `

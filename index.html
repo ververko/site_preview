@@ -51,7 +51,7 @@
 
   /* HERO — full-bleed split, same pattern as About */
   .hero{background:var(--white); color:var(--navy);}
-  .hero-split{display:grid; grid-template-columns:1.6fr 1fr; min-height:620px;}
+  .hero-split{display:grid; grid-template-columns:1.15fr 1fr; min-height:620px;}
   .hero-copy{display:flex; flex-direction:column; justify-content:center; padding:0 64px 0 72px;}
   .hero-copy .chip{background:var(--pink); margin-bottom:14px;}
   .hero-copy h1{font-size:72px; margin-bottom:16px; color:var(--navy);}
@@ -67,26 +67,35 @@
   .hero-photo{position:relative; overflow:hidden; background:var(--navy);}
   .hero-photo img{object-position:center 22%;}
 
-  /* ABOUT — full-bleed split: color-blocked photo half + copy half */
-  .about-section{background:var(--white);}
-  .about-split{display:grid; grid-template-columns:1fr 1.6fr; min-height:620px;}
-  .about-photo{position:relative; overflow:hidden; background:var(--navy);}
-  .about-photo img{filter:saturate(1.05) contrast(1.02); object-position:center 45%;}
-  .about-copy{display:flex; flex-direction:column; justify-content:center; padding:64px 72px 64px 64px;}
-  .about-copy p{
-    font-family:var(--sans); font-size:19px; line-height:1.6; color:var(--navy-soft); margin-bottom:20px; max-width:480px;
+  /* ABOUT — full-bleed photo background, mirrored from hero, text as floating glass blocks */
+  .about-section{position:relative; background:var(--navy); min-height:820px; overflow:hidden;}
+  .about-bg{position:absolute; inset:0; z-index:0;}
+  .about-bg img{width:100%; height:100%; object-fit:cover; object-position:center 42%; filter:saturate(1.05) contrast(1.05);}
+  .about-scrim{
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(0deg, rgba(15,20,36,.55) 0%, rgba(15,20,36,.1) 40%, rgba(15,20,36,0) 65%);
   }
-  .about-copy .link-arrow{color:var(--navy); border-color:var(--pink); display:inline-block; margin-top:6px;}
+  .about-section > .wrap{position:absolute; left:0; right:0; bottom:0;}
+  .about-copy{
+    position:relative; z-index:2; margin-left:auto; max-width:520px;
+    display:flex; flex-direction:column; align-items:flex-end; gap:14px; padding-bottom:64px;
+  }
+  .about-copy p{
+    font-family:var(--sans); font-size:16.5px; line-height:1.55; color:rgba(255,255,255,.94); margin:0; max-width:none;
+    text-align:left; background:rgba(18,24,43,.5); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.16); border-radius:16px; padding:20px 24px;
+  }
+  .about-copy .link-arrow{color:var(--white); border-color:var(--pink); display:inline-block; margin-top:2px;}
   @media (max-width:880px){
     .hero-split{grid-template-columns:1fr;}
     .hero-copy{padding:64px 24px;}
     .hero-copy h1{font-size:42px;}
     .hero-role{white-space:normal; font-size:14px;}
     .hero-photo{aspect-ratio:4/5;}
-    .about-split{grid-template-columns:1fr;}
-    .about-photo{aspect-ratio:4/5;}
-    .about-copy{padding:56px 24px;}
-    .about-copy p{font-size:17px;}
+    .about-section{min-height:0;}
+    .about-section > .wrap{position:static;}
+    .about-copy{max-width:none; align-items:stretch; margin-left:0; padding:56px 24px;}
+    .about-copy p{font-size:16px;}
   }
 
   /* MARQUEE */
@@ -203,12 +212,13 @@
 </div>
 
 <section class="about-section" id="about">
-  <div class="about-split">
-    <div class="about-photo">
-      <img src="assets/about-collage-2.jpg" alt="Collage artwork by Vera Korman">
-    </div>
+  <div class="about-bg">
+    <img src="assets/about-silhouette-wide.jpg" alt="Silhouette portrait of Vera Korman">
+  </div>
+  <div class="about-scrim"></div>
+  <div class="wrap">
     <div class="about-copy">
-      <span class="chip" style="background:var(--pink); margin-bottom:18px;">About</span>
+      <span class="chip" style="background:var(--pink); margin-bottom:4px;">About</span>
       <p>Driven by an ongoing artistic practice and a deep foundation in visual culture, Vera Korman brings over fifteen years of experience in higher education, curatorial practice, and cultural programming. She translates broad technical, theoretical, and creative expertise into engaging courses, exhibitions, and public programs.</p>
       <p>Her professional background includes lecturing and curriculum development at art academies, curating six editions of the Musraramix Festival, presenting work at venues such as the Tel Aviv Museum of Art and Museum Boijmans Van Beuningen, and collaborating with the Israel Festival.</p>
       <p>Based in Barcelona, Vera designs independent educational programs, philosophical walking tours, and specialized workshops, collaborating with universities, cultural organizations, corporate clients, and global audiences.</p>
