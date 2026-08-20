@@ -39,14 +39,9 @@
   .navlinks a:hover{color:var(--pink);}
   .navlinks .btn{background:var(--pink); padding:11px 24px; font-size:13px;}
 
-  .circle-subnav{background:var(--white); border-bottom:1px solid #E7E9F0; position:sticky; top:70px; z-index:40;}
-  .circle-subnav .wrap{display:flex; align-items:center; gap:8px; overflow-x:auto;}
-  .circle-subnav a{
-    display:inline-block; font-size:14px; font-weight:600; color:var(--navy-soft); white-space:nowrap;
-    padding:18px 16px; border-bottom:3px solid transparent;
-  }
-  .circle-subnav a:hover{color:var(--navy);}
-  .circle-subnav a.active{color:var(--navy); border-bottom-color:var(--circle-color);}
+  .btn.outline{background:transparent; color:var(--navy); border:2px solid var(--navy);}
+  .btn.small{padding:11px 22px; font-size:13px;}
+  .circle-links{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px;}
 
   .page-head{padding:90px 0 60px 0;}
   .page-head .circle-num{
@@ -112,21 +107,17 @@
   </nav>
 </header>
 
-<div class="circle-subnav">
-  <div class="wrap">
-    <a href="the-art-circle.html">Overview</a>
-    <a href="circle-one.html">Circle One</a>
-    <a href="circle-two.html">Circle Two</a>
-    <a href="circle-three.html" class="active">Circle Three</a>
-    <a href="art-circle-register.html">Register &amp; FAQ</a>
-  </div>
-</div>
-
 <section class="wrap page-head">
   <span class="circle-num">3</span>
   <span class="kicker">The Art Circle — Part Three</span>
   <h1>Circle Three</h1>
   <p>[Placeholder — one or two sentences introducing this circle: its theme and its place in the overall program.]</p>
+  <div class="circle-links">
+    <a class="btn small outline" href="the-art-circle.html">← Overview</a>
+    <a class="btn small outline" href="circle-one.html">Circle One</a>
+    <a class="btn small outline" href="circle-two.html">Circle Two</a>
+    <a class="btn small outline" href="art-circle-register.html">Register &amp; FAQ</a>
+  </div>
 </section>
 
 <section class="wrap content-block">

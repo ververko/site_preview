@@ -47,15 +47,7 @@
   .navlinks a:hover{color:var(--pink);}
   .navlinks .btn{background:var(--pink); padding:11px 24px; font-size:13px;}
 
-  /* SUB-NAV — specific to The Art Circle project */
-  .circle-subnav{background:var(--white); border-bottom:1px solid #E7E9F0; position:sticky; top:70px; z-index:40;}
-  .circle-subnav .wrap{display:flex; align-items:center; gap:8px; overflow-x:auto; padding-top:0; padding-bottom:0;}
-  .circle-subnav a{
-    display:inline-block; font-size:14px; font-weight:600; color:var(--navy-soft); white-space:nowrap;
-    padding:18px 16px; border-bottom:3px solid transparent;
-  }
-  .circle-subnav a:hover{color:var(--navy);}
-  .circle-subnav a.active{color:var(--navy); border-bottom-color:var(--cobalt);}
+  .btn.small{padding:11px 22px; font-size:13px;}
 
   /* HERO */
   .circle-hero{position:relative; min-height:600px; display:flex; align-items:flex-end; overflow:hidden; background:var(--cobalt);}
@@ -141,16 +133,6 @@
   </nav>
 </header>
 
-<div class="circle-subnav">
-  <div class="wrap">
-    <a href="the-art-circle.html" class="active">Overview</a>
-    <a href="circle-one.html">Circle One</a>
-    <a href="circle-two.html">Circle Two</a>
-    <a href="circle-three.html">Circle Three</a>
-    <a href="art-circle-register.html">Register &amp; FAQ</a>
-  </div>
-</div>
-
 <section class="circle-hero">
   <div class="hero-bg"></div>
   <div class="hero-scrim"></div>
@@ -162,6 +144,7 @@
       <a class="btn" href="circle-one.html">Circle One</a>
       <a class="btn" href="circle-two.html">Circle Two</a>
       <a class="btn" href="circle-three.html">Circle Three</a>
+      <a class="btn outline" href="art-circle-register.html" style="color:var(--white); border-color:var(--white);">Register &amp; FAQ</a>
     </div>
   </div>
 </section>
