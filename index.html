@@ -6,7 +6,7 @@
 <title>Vera Korman — Art Historian, Curator, Educator, Artist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400..900;1,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#12182B;
@@ -54,16 +54,16 @@
   .hero-split{display:grid; grid-template-columns:1.3fr 1fr; align-items:center; min-height:640px; gap:40px;}
   .hero-copy{padding:64px 0 64px 72px;}
   .hero-copy h1{
-    font-family:'Instrument Serif', var(--serif); font-weight:400; font-style:normal; font-size:140px; line-height:.94;
-    letter-spacing:-.01em; margin-bottom:24px; color:var(--navy);
+    font-family:'Archivo', var(--sans); font-weight:800; font-style:normal; font-size:104px; line-height:.94;
+    letter-spacing:-.02em; margin-bottom:24px; color:var(--navy);
   }
   .hero-role{
-    font-family:'Space Grotesk', var(--sans); font-size:18px; font-weight:400; letter-spacing:.01em;
-    color:var(--pink); margin-bottom:44px; white-space:nowrap;
+    font-family:'Archivo', var(--sans); font-size:17px; font-weight:700; font-style:italic; letter-spacing:.01em;
+    color:var(--pink); margin-bottom:44px; white-space:nowrap; text-transform:uppercase;
   }
   .hero-ctas{display:flex; align-items:center; gap:36px; flex-wrap:wrap;}
   .hero-ctas .text-link{
-    font-family:'Space Grotesk', var(--sans); font-size:16px; font-weight:400; color:var(--navy);
+    font-family:'Archivo', var(--sans); font-size:16px; font-weight:700; color:var(--navy);
     border-bottom:1px solid var(--navy); padding-bottom:4px; transition:opacity .16s ease;
   }
   .hero-ctas .text-link:hover{opacity:.55;}
@@ -101,6 +101,19 @@
     .about-copy{max-width:none; align-items:stretch; margin-left:0; padding:56px 24px;}
     .about-copy p{font-size:16px;}
   }
+
+  /* MARQUEE */
+  .marquee{
+    background:var(--white); color:var(--navy); overflow:hidden; white-space:nowrap; padding:22px 0;
+    border-top:2px dashed #D8DCE6; border-bottom:2px dashed #D8DCE6;
+  }
+  .marquee-track{display:inline-block; padding-left:100%; animation:scroll 34s linear infinite;}
+  .marquee span{
+    font-family:'Archivo', var(--sans); font-size:20px; font-weight:800; font-style:italic; letter-spacing:-.01em;
+    text-transform:uppercase; color:var(--navy); margin:0 28px;
+  }
+  .marquee .sep{color:var(--pink); font-size:20px; margin:0 28px; font-style:normal;}
+  @keyframes scroll{ 0%{transform:translateX(0);} 100%{transform:translateX(-100%);} }
 
   /* PROGRAMS — magazine spread: square image + text, side by side */
   .programs{background:var(--white); padding:130px 0; color:var(--navy);}
@@ -204,6 +217,13 @@
     </div>
   </div>
 </section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Lectures</span><span class="sep">•</span><span>Art Walks Barcelona</span><span class="sep">•</span><span>Workshops</span><span class="sep">•</span><span>Curatorial Projects</span><span class="sep">•</span>
+    <span>Lectures</span><span class="sep">•</span><span>Art Walks Barcelona</span><span class="sep">•</span><span>Workshops</span><span class="sep">•</span><span>Curatorial Projects</span><span class="sep">•</span>
+  </div>
+</div>
 
 <section class="about-section" id="about">
   <div class="about-bg">
