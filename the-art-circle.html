@@ -6,7 +6,7 @@
 <title>The Art Circle — Vera Korman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400..900;1,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#12182B;
@@ -16,7 +16,7 @@
     --cobalt:#3654FF;
     --green:#1FAE6E;
     --violet:#8B5CF6;
-    --serif:'Bricolage Grotesque', 'Work Sans', sans-serif;
+    --serif:'Archivo', 'Work Sans', sans-serif;
     --sans:'Work Sans', Helvetica, Arial, sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -28,43 +28,43 @@
   h1,h2,h3{font-family:var(--serif); font-weight:600; letter-spacing:-.01em; line-height:1.05;}
   .pink{color:var(--pink);} .cobalt{color:var(--cobalt);}
   .chip{
-    display:inline-flex; align-items:center; gap:8px; font-family:var(--sans); font-size:15px; font-weight:700;
-    letter-spacing:.1em; text-transform:uppercase; padding:11px 22px; border-radius:999px; color:var(--white);
+    display:block; font-family:'Archivo', var(--sans); font-size:17px; font-weight:500; font-style:italic;
+    letter-spacing:.01em; text-transform:uppercase; color:var(--pink);
   }
   .btn{
-    display:inline-flex; align-items:center; gap:8px; font-family:var(--sans); font-weight:700;
-    font-size:14px; letter-spacing:.02em; padding:17px 32px; border-radius:999px;
-    transition:transform .16s ease; border:2px solid transparent; color:var(--white); background:var(--navy);
+    display:inline-flex; align-items:center; gap:8px; font-family:'Archivo', var(--sans); font-weight:400;
+    font-size:16px; color:var(--navy); border-bottom:1px solid var(--navy); padding-bottom:4px;
+    transition:opacity .16s ease;
   }
-  .btn:hover{transform:translateY(-2px);}
-  .btn.outline{background:transparent; border:2px solid currentColor;}
-  .link-arrow{font-family:var(--sans); font-size:14px; font-weight:700; border-bottom:2px solid currentColor; padding-bottom:3px;}
+  .btn:hover{opacity:.55;}
+  .btn.outline{color:var(--white); border-bottom-color:var(--white);}
+  .link-arrow{font-family:'Archivo', var(--sans); font-size:15px; font-weight:400; border-bottom:1px solid currentColor; padding-bottom:3px;}
 
   /* NAV */
   header{background:var(--navy); position:sticky; top:0; z-index:50;}
   nav.wrap{display:flex; align-items:center; justify-content:flex-end; padding-top:22px; padding-bottom:22px;}
   .navlinks{display:flex; align-items:center; gap:36px; font-size:14px; font-weight:500; color:var(--white);}
   .navlinks a:hover{color:var(--pink);}
-  .navlinks .btn{background:var(--pink); padding:11px 24px; font-size:13px;}
+  .navlinks .nav-cta{color:var(--pink); border-bottom:1px solid var(--pink); padding-bottom:3px;}
 
-  .btn.small{padding:11px 22px; font-size:13px;}
+  .btn.small{font-size:13px;}
 
   /* HERO */
   .circle-hero{position:relative; min-height:600px; display:flex; align-items:flex-end; overflow:hidden; background:var(--cobalt);}
   .circle-hero .hero-bg{position:absolute; inset:0; z-index:0; background:linear-gradient(135deg, var(--cobalt) 0%, var(--navy) 100%);}
   .circle-hero .hero-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(0deg, rgba(15,20,36,.75) 0%, rgba(15,20,36,.15) 60%, rgba(15,20,36,0) 100%);}
   .circle-hero .wrap{position:relative; z-index:2; padding-top:90px; padding-bottom:64px;}
-  .circle-hero .chip{background:var(--pink); margin-bottom:18px;}
+  .circle-hero .chip{color:var(--white); margin-bottom:18px;}
   .circle-hero h1{font-size:64px; color:var(--white); margin-bottom:20px; max-width:760px;}
   .circle-hero .lede{font-family:var(--serif); font-style:italic; font-weight:500; font-size:22px; color:rgba(255,255,255,.88); max-width:620px; margin-bottom:36px;}
-  .circle-btns{display:flex; flex-wrap:wrap; gap:16px;}
-  .circle-btns .btn{background:var(--white); color:var(--navy);}
-  .circle-btns .btn:hover{background:var(--pink); color:var(--white);}
+  .circle-btns{display:flex; flex-wrap:wrap; gap:28px;}
+  .circle-btns .btn{color:var(--white); border-bottom-color:var(--white);}
+  .circle-btns .btn.outline{color:var(--pink); border-bottom-color:var(--pink);}
 
   /* ABOUT */
   .about-course{padding:110px 0;}
   .about-course .section-head{max-width:680px; margin-bottom:20px;}
-  .about-course .chip{background:var(--green); margin-bottom:14px;}
+  .about-course .chip{color:var(--green); margin-bottom:14px;}
   .about-course h2{font-size:38px; color:var(--navy);}
   .about-course p{font-size:19px; line-height:1.65; color:var(--navy-soft); max-width:680px; margin-top:22px;}
   .placeholder-note{
@@ -75,7 +75,7 @@
   /* CIRCLES GRID */
   .circles{background:#F7F8FB; padding:110px 0;}
   .circles .section-head{max-width:680px; margin-bottom:56px;}
-  .circles .chip{background:var(--cobalt); margin-bottom:14px;}
+  .circles .chip{color:var(--cobalt); margin-bottom:14px;}
   .circles h2{font-size:38px; color:var(--navy);}
   .circles-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
   .circle-card{
@@ -96,7 +96,7 @@
   /* ABOUT US — instructors */
   .instructors{padding:110px 0;}
   .instructors .section-head{max-width:680px; margin-bottom:56px;}
-  .instructors .chip{background:var(--violet); margin-bottom:14px;}
+  .instructors .chip{color:var(--violet); margin-bottom:14px;}
   .instructors h2{font-size:38px; color:var(--navy);}
   .instructors-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
   .instructor-card{display:flex; flex-direction:column;}
@@ -116,9 +116,9 @@
 
   /* CLOSING */
   .closing{padding:110px 0; text-align:center; background:var(--navy); color:var(--white);}
-  .closing .chip{background:var(--pink); margin-bottom:14px;}
+  .closing .chip{color:var(--pink); margin-bottom:14px;}
   .closing h2{font-size:40px; max-width:640px; margin:0 auto 36px auto; color:var(--white);}
-  .closing .btn{background:var(--pink); color:var(--white);}
+  .closing .btn{color:var(--white); border-bottom-color:var(--white);}
 
   footer{background:var(--navy); color:#B7BFD6; padding:70px 0 40px 0; font-size:14px; border-top:1px solid #2C3554;}
   .footer-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:60px; padding-bottom:50px; border-bottom:1px solid #2C3554;}
@@ -150,7 +150,7 @@
       <a href="index.html#highlights">Selected Work</a>
       <a href="writing.html">Writing</a>
       <a href="the-art-circle.html">The Art Circle</a>
-      <a class="btn" href="index.html#contact">Contact</a>
+      <a class="nav-cta" href="index.html#contact">Contact</a>
     </div>
   </nav>
 </header>
@@ -166,7 +166,7 @@
       <a class="btn" href="circle-one.html">Circle One</a>
       <a class="btn" href="circle-two.html">Circle Two</a>
       <a class="btn" href="circle-three.html">Circle Three</a>
-      <a class="btn outline" href="art-circle-register.html" style="color:var(--white); border-color:var(--white);">Register &amp; FAQ</a>
+      <a class="btn outline" href="art-circle-register.html">Register &amp; FAQ</a>
     </div>
   </div>
 </section>
