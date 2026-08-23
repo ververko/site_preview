@@ -54,10 +54,6 @@
   .circle-hero .hero-bg{position:absolute; inset:0; z-index:0; background:linear-gradient(135deg, var(--cobalt) 0%, var(--navy) 100%);}
   .circle-hero video{position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover;}
   .circle-hero .hero-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(0deg, rgba(15,20,36,.8) 0%, rgba(15,20,36,.25) 55%, rgba(15,20,36,.1) 100%);}
-  .circle-hero .video-note{
-    position:absolute; z-index:3; top:24px; right:24px; font-size:12px; font-weight:600; color:var(--violet);
-    background:#F4F1FE; border:1px dashed var(--violet); border-radius:8px; padding:8px 14px;
-  }
   .circle-hero .wrap{position:relative; z-index:2; padding-top:90px; padding-bottom:64px;}
   .circle-hero .chip{color:var(--white); margin-bottom:18px;}
   .circle-hero h1{font-size:64px; color:var(--white); margin-bottom:20px; max-width:760px;}
@@ -160,10 +156,7 @@
 
 <section class="circle-hero">
   <div class="hero-bg"></div>
-  <video autoplay muted loop playsinline poster="">
-    <!-- Placeholder — add your video: <source src="assets/art-circle-hero.mp4" type="video/mp4"> -->
-  </video>
-  <span class="video-note">⚬ Placeholder — send me a video file for this background</span>
+  <video autoplay muted loop playsinline src="assets/art-circle-hero.mov"></video>
   <div class="hero-scrim"></div>
   <div class="wrap">
     <span class="chip">The Art Circle</span>
