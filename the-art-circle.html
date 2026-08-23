@@ -55,9 +55,14 @@
   .circle-hero video{position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover;}
   .circle-hero .hero-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(0deg, rgba(15,20,36,.8) 0%, rgba(15,20,36,.25) 55%, rgba(15,20,36,.1) 100%);}
   .circle-hero .wrap{position:relative; z-index:2; padding-top:90px; padding-bottom:64px;}
-  .circle-hero .chip{color:var(--white); margin-bottom:18px;}
-  .circle-hero h1{font-size:64px; color:var(--white); margin-bottom:20px; max-width:760px;}
-  .circle-hero .lede{font-family:var(--serif); font-style:italic; font-weight:500; font-size:22px; color:rgba(255,255,255,.88); max-width:620px; margin-bottom:36px;}
+  .circle-hero h1{
+    font-family:'Archivo', var(--sans); font-weight:400; font-size:96px; line-height:.96; letter-spacing:-.02em;
+    color:var(--white); margin-bottom:20px; max-width:820px;
+  }
+  .circle-hero .lede{
+    font-family:'Archivo', var(--sans); font-style:italic; font-weight:400; font-size:19px;
+    color:var(--pink); max-width:620px; margin-bottom:36px;
+  }
   .circle-btns{display:flex; flex-wrap:wrap; gap:28px;}
   .circle-btns .btn{color:var(--white); border-bottom-color:var(--white);}
   .circle-btns .btn.outline{color:var(--pink); border-bottom-color:var(--pink);}
@@ -163,8 +168,8 @@
   <video autoplay muted loop playsinline src="assets/art-circle-hero.mov"></video>
   <div class="hero-scrim"></div>
   <div class="wrap">
-    <span class="chip">The Art Circle</span>
-    <h1>Step inside creative minds.</h1>
+    <h1>The Art Circle</h1>
+    <p class="lede">Step inside creative minds.</p>
     <div class="circle-btns">
       <a class="btn" href="circle-one.html">Circle One</a>
       <a class="btn" href="circle-two.html">Circle Two</a>
