@@ -49,10 +49,15 @@
 
   .btn.small{font-size:13px;}
 
-  /* HERO */
-  .circle-hero{position:relative; min-height:600px; display:flex; align-items:flex-end; overflow:hidden; background:var(--cobalt);}
+  /* HERO — full-page video background */
+  .circle-hero{position:relative; min-height:100vh; display:flex; align-items:flex-end; overflow:hidden; background:var(--cobalt);}
   .circle-hero .hero-bg{position:absolute; inset:0; z-index:0; background:linear-gradient(135deg, var(--cobalt) 0%, var(--navy) 100%);}
-  .circle-hero .hero-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(0deg, rgba(15,20,36,.75) 0%, rgba(15,20,36,.15) 60%, rgba(15,20,36,0) 100%);}
+  .circle-hero video{position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover;}
+  .circle-hero .hero-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(0deg, rgba(15,20,36,.8) 0%, rgba(15,20,36,.25) 55%, rgba(15,20,36,.1) 100%);}
+  .circle-hero .video-note{
+    position:absolute; z-index:3; top:24px; right:24px; font-size:12px; font-weight:600; color:var(--violet);
+    background:#F4F1FE; border:1px dashed var(--violet); border-radius:8px; padding:8px 14px;
+  }
   .circle-hero .wrap{position:relative; z-index:2; padding-top:90px; padding-bottom:64px;}
   .circle-hero .chip{color:var(--white); margin-bottom:18px;}
   .circle-hero h1{font-size:64px; color:var(--white); margin-bottom:20px; max-width:760px;}
@@ -77,20 +82,18 @@
   .circles .section-head{max-width:680px; margin-bottom:56px;}
   .circles .chip{color:var(--cobalt); margin-bottom:14px;}
   .circles h2{font-size:38px; color:var(--navy);}
-  .circles-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .circles-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:48px;}
   .circle-card{
-    background:var(--white); border-radius:16px; padding:40px 32px; border:1px solid #E7E9F0;
-    display:flex; flex-direction:column; transition:transform .16s ease, box-shadow .16s ease;
+    padding-top:28px; border-top:1px solid #D8DCE6;
+    display:flex; flex-direction:column;
   }
-  .circle-card:hover{transform:translateY(-4px); box-shadow:0 20px 40px rgba(18,24,43,.08);}
   .circle-num{
-    width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center;
-    font-family:var(--serif); font-weight:700; font-size:20px; color:var(--white); margin-bottom:24px;
+    font-family:'Archivo', var(--sans); font-weight:400; font-style:italic; font-size:17px; margin-bottom:20px;
   }
-  .circle-card:nth-child(1) .circle-num{background:var(--pink);}
-  .circle-card:nth-child(2) .circle-num{background:var(--cobalt);}
-  .circle-card:nth-child(3) .circle-num{background:var(--violet);}
-  .circle-card h3{font-size:24px; color:var(--navy); margin-bottom:14px;}
+  .circle-card:nth-child(1) .circle-num{color:var(--pink);}
+  .circle-card:nth-child(2) .circle-num{color:var(--cobalt);}
+  .circle-card:nth-child(3) .circle-num{color:var(--violet);}
+  .circle-card h3{font-size:26px; color:var(--navy); margin-bottom:14px; font-weight:600;}
   .circle-card p{font-size:15.5px; line-height:1.6; color:var(--navy-soft); margin-bottom:24px; flex-grow:1;}
 
   /* ABOUT US — instructors */
@@ -157,6 +160,10 @@
 
 <section class="circle-hero">
   <div class="hero-bg"></div>
+  <video autoplay muted loop playsinline poster="">
+    <!-- Placeholder — add your video: <source src="assets/art-circle-hero.mp4" type="video/mp4"> -->
+  </video>
+  <span class="video-note">⚬ Placeholder — send me a video file for this background</span>
   <div class="hero-scrim"></div>
   <div class="wrap">
     <span class="chip">The Art Circle</span>
@@ -215,19 +222,19 @@
     </div>
     <div class="circles-grid">
       <div class="circle-card">
-        <span class="circle-num">1</span>
+        <span class="circle-num">Part One</span>
         <h3>Circle One</h3>
         <p>[Placeholder — a few sentences on what Circle One covers.]</p>
         <a class="link-arrow" href="circle-one.html">Learn more →</a>
       </div>
       <div class="circle-card">
-        <span class="circle-num">2</span>
+        <span class="circle-num">Part Two</span>
         <h3>Circle Two</h3>
         <p>[Placeholder — a few sentences on what Circle Two covers.]</p>
         <a class="link-arrow" href="circle-two.html">Learn more →</a>
       </div>
       <div class="circle-card">
-        <span class="circle-num">3</span>
+        <span class="circle-num">Part Three</span>
         <h3>Circle Three</h3>
         <p>[Placeholder — a few sentences on what Circle Three covers.]</p>
         <a class="link-arrow" href="circle-three.html">Learn more →</a>
