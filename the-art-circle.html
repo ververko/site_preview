@@ -63,6 +63,16 @@
     font-family:'Archivo', var(--sans); font-style:italic; font-weight:400; font-size:32px;
     color:var(--pink); max-width:680px; margin-bottom:36px;
   }
+  .hero-quotes{display:flex; gap:44px; flex-wrap:wrap; max-width:1040px; margin-bottom:44px;}
+  .hero-quote{flex:1; min-width:220px; border-left:1px solid rgba(255,255,255,.3); padding-left:18px;}
+  .hero-quote p{
+    font-family:var(--serif); font-style:italic; font-weight:300; font-size:15px; line-height:1.55;
+    color:rgba(255,255,255,.92); margin-bottom:10px;
+  }
+  .hero-quote span{
+    font-family:'Archivo', var(--sans); font-size:12px; font-weight:500; letter-spacing:.03em;
+    text-transform:uppercase; color:rgba(255,255,255,.55);
+  }
   .circle-btns{display:flex; flex-wrap:wrap; gap:28px;}
   .circle-btns .btn{color:var(--white); border-bottom-color:var(--white);}
   .circle-btns .btn.outline{color:var(--pink); border-bottom-color:var(--pink);}
@@ -140,6 +150,7 @@
     .wrap{padding:0 24px;}
     .circle-hero h1{font-size:38px;}
     .circle-hero .lede{font-size:22px;}
+    .hero-quotes{flex-direction:column; gap:22px; margin-bottom:32px;}
     .circles-grid{grid-template-columns:1fr;}
     .instructors-grid{grid-template-columns:1fr;}
     .about-course-grid{grid-template-columns:1fr; gap:32px;}
@@ -173,6 +184,20 @@
   <div class="wrap">
     <h1>The Art Circle</h1>
     <p class="lede">Step inside creative minds.</p>
+    <div class="hero-quotes">
+      <div class="hero-quote">
+        <p>"Art is a lie that makes us realize truth."</p>
+        <span>Pablo Picasso, 1923</span>
+      </div>
+      <div class="hero-quote">
+        <p>"The work itself has a complete circle of meaning and counterpoint. And without your involvement as a viewer, there is no story."</p>
+        <span>Anish Kapoor</span>
+      </div>
+      <div class="hero-quote">
+        <p>"Esthetic experience is experience in its integrity."</p>
+        <span>John Dewey, Art as Experience, 1934</span>
+      </div>
+    </div>
     <div class="circle-btns">
       <a class="btn" href="circle-one.html">Circle One</a>
       <a class="btn" href="circle-two.html">Circle Two</a>
