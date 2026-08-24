@@ -59,6 +59,19 @@
   .content-block{padding:0 0 70px 0;}
   .content-block h2{font-size:26px; color:var(--navy); margin-bottom:16px;}
   .content-block p{font-size:17px; line-height:1.65; color:var(--navy-soft); max-width:680px; margin-bottom:14px;}
+  .page-head .subtitle{
+    display:block; font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:26px; color:var(--circle-color); margin-bottom:18px;
+  }
+  .theme-list{max-width:680px; margin-top:8px;}
+  .theme-item{display:flex; gap:22px; padding:22px 0; border-top:1px solid #E7E9F0;}
+  .theme-item:last-child{border-bottom:1px solid #E7E9F0;}
+  .theme-term{
+    font-family:var(--serif); font-weight:700; font-size:19px; color:var(--circle-color);
+    flex:0 0 90px;
+  }
+  .theme-item p{font-size:17px; line-height:1.5; color:var(--navy-soft); margin-bottom:0;}
+  .content-block .lede{font-size:18px; line-height:1.6; color:var(--navy); max-width:680px; margin-top:26px;}
   .placeholder-note{
     display:inline-block; margin-top:6px; font-size:13px; font-weight:600; color:var(--violet);
     background:#F4F1FE; border:1px dashed var(--violet); border-radius:8px; padding:10px 16px;
@@ -109,9 +122,10 @@
 
 <section class="wrap page-head">
   <span class="circle-num">1</span>
-  <span class="kicker">The Art Circle — Part One</span>
+  <span class="kicker">The Art Question</span>
   <h1>Circle One</h1>
-  <p>[Placeholder — one or two sentences introducing this circle: its theme and its place in the overall program.]</p>
+  <span class="subtitle">Art, Value &amp; Power</span>
+  <p>Each gathering begins with a question and approaches it in a different way — through artworks, ideas, people, places and conversation.</p>
   <div class="circle-links">
     <a class="btn small outline" href="the-art-circle.html">← Overview</a>
     <a class="btn small outline" href="circle-two.html">Circle Two</a>
@@ -122,8 +136,20 @@
 
 <section class="wrap content-block">
   <h2>What You'll Explore</h2>
-  <p>[Placeholder — describe the topics, questions, or works this circle moves through.]</p>
-  <span class="placeholder-note">⚬ Placeholder — send me the real text for this section</span>
+  <div class="theme-list">
+    <div class="theme-item">
+      <span class="theme-term">Art</span>
+      <p>What is art? Where are its boundaries?</p>
+    </div>
+    <div class="theme-item">
+      <span class="theme-term">Value</span>
+      <p>How are taste and value created?</p>
+    </div>
+    <div class="theme-item">
+      <span class="theme-term">Power</span>
+      <p>Who decides, who gets shown, who gets remembered, and who gets left out?</p>
+    </div>
+  </div>
 </section>
 
 <section class="wrap content-block">
