@@ -60,8 +60,8 @@
     color:var(--white); margin-bottom:20px; max-width:820px;
   }
   .circle-hero .lede{
-    font-family:'Archivo', var(--sans); font-style:italic; font-weight:400; font-size:19px;
-    color:var(--pink); max-width:620px; margin-bottom:36px;
+    font-family:'Archivo', var(--sans); font-style:italic; font-weight:400; font-size:32px;
+    color:var(--pink); max-width:680px; margin-bottom:36px;
   }
   .circle-btns{display:flex; flex-wrap:wrap; gap:28px;}
   .circle-btns .btn{color:var(--white); border-bottom-color:var(--white);}
@@ -81,8 +81,7 @@
   /* CIRCLES GRID */
   .circles{background:#F7F8FB; padding:110px 0;}
   .circles .section-head{max-width:680px; margin-bottom:56px;}
-  .circles .chip{color:var(--cobalt); margin-bottom:14px;}
-  .circles h2{font-size:38px; color:var(--navy);}
+  .circles .chip{color:var(--cobalt); font-size:34px;}
   .circles-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:48px;}
   .circle-card{
     padding-top:28px; border-top:1px solid #D8DCE6;
@@ -100,8 +99,7 @@
   /* ABOUT US — instructors */
   .instructors{padding:110px 0;}
   .instructors .section-head{max-width:680px; margin-bottom:56px;}
-  .instructors .chip{color:var(--violet); margin-bottom:14px;}
-  .instructors h2{font-size:38px; color:var(--navy);}
+  .instructors .chip{color:var(--violet); font-size:34px;}
   .instructors-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
   .instructor-card{display:flex; flex-direction:column;}
   .instructor-photo{
@@ -135,10 +133,11 @@
   @media (max-width:880px){
     .wrap{padding:0 24px;}
     .circle-hero h1{font-size:38px;}
-    .circle-hero .lede{font-size:18px;}
+    .circle-hero .lede{font-size:22px;}
     .circles-grid{grid-template-columns:1fr;}
     .instructors-grid{grid-template-columns:1fr;}
-    .about-course h2, .circles h2, .instructors h2, .closing h2{font-size:28px;}
+    .about-course h2, .closing h2{font-size:28px;}
+    .circles .chip, .instructors .chip{font-size:24px;}
     .footer-grid{grid-template-columns:1fr; gap:36px;}
     .navlinks{display:none;}
   }
@@ -186,35 +185,10 @@
   </div>
 </section>
 
-<section class="instructors">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="chip">About Us</span>
-      <h2>Your instructors</h2>
-    </div>
-    <div class="instructors-grid">
-      <div class="instructor-card">
-        <div class="instructor-photo">[Photo of Vera]</div>
-        <h3>Vera Korman</h3>
-        <span class="instructor-role">Artist &amp; Researcher</span>
-        <p>[Placeholder — a short bio of Vera as co-instructor of The Art Circle: her angle on the program, relevant background.]</p>
-      </div>
-      <div class="instructor-card">
-        <div class="instructor-photo">[Photo of Michal]</div>
-        <h3>Michal [Last Name]</h3>
-        <span class="instructor-role">Co-Instructor</span>
-        <p>[Placeholder — a short bio of Michal: role, background, what she brings to The Art Circle.]</p>
-      </div>
-    </div>
-    <span class="placeholder-note">⚬ Placeholder — send me photos, Michal's last name, and both bios</span>
-  </div>
-</section>
-
 <section class="circles">
   <div class="wrap">
     <div class="section-head">
-      <span class="chip">The Three Circles</span>
-      <h2>Three circles, three semesters</h2>
+      <span class="chip">Three circles, three semesters</span>
     </div>
     <div class="circles-grid">
       <div class="circle-card">
@@ -236,6 +210,29 @@
         <a class="link-arrow" href="circle-three.html">Learn more →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="instructors">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="chip">About Us</span>
+    </div>
+    <div class="instructors-grid">
+      <div class="instructor-card">
+        <div class="instructor-photo">[Photo of Vera]</div>
+        <h3>Vera Korman</h3>
+        <span class="instructor-role">Artist &amp; Researcher</span>
+        <p>[Placeholder — a short bio of Vera as co-instructor of The Art Circle: her angle on the program, relevant background.]</p>
+      </div>
+      <div class="instructor-card">
+        <div class="instructor-photo">[Photo of Michal]</div>
+        <h3>Michal [Last Name]</h3>
+        <span class="instructor-role">Co-Instructor</span>
+        <p>[Placeholder — a short bio of Michal: role, background, what she brings to The Art Circle.]</p>
+      </div>
+    </div>
+    <span class="placeholder-note">⚬ Placeholder — send me photos, Michal's last name, and both bios</span>
   </div>
 </section>
 
