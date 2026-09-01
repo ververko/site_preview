@@ -96,20 +96,37 @@
 
   /* CIRCLES GRID */
   .circles{background:#F7F8FB; padding:110px 0;}
-  .circles .section-head{max-width:680px; margin-bottom:56px;}
-  .circles .chip{color:var(--cobalt); font-size:34px;}
   .circles-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:48px;}
+  .circle-card .circle-label{
+    display:block; font-family:'Archivo', var(--sans); font-size:14px; font-weight:600;
+    letter-spacing:.04em; text-transform:uppercase; color:var(--navy-soft); margin-bottom:14px;
+  }
+  .circle-card h3{font-family:var(--serif); font-style:italic; font-weight:300; letter-spacing:-.005em; line-height:1.1;}
+  .circle-card:nth-child(1) h3{color:var(--pink);}
+  .circle-card:nth-child(2) h3{color:var(--cobalt);}
+  .circle-card:nth-child(3) h3{color:var(--violet);}
+  .circle-card .circle-theme{
+    display:block; font-family:var(--sans); font-weight:500; font-size:16px; color:var(--navy);
+    line-height:1.4; margin-top:12px; margin-bottom:22px;
+  }
+  .coming-soon-overlay{
+    display:none; position:fixed; inset:0; z-index:200; background:rgba(15,20,36,.75);
+    align-items:center; justify-content:center; padding:24px;
+  }
+  .coming-soon-overlay.active{display:flex;}
+  .coming-soon-box{background:var(--white); border-radius:16px; padding:48px 40px; max-width:420px; text-align:center; position:relative;}
+  .coming-soon-box h3{font-family:var(--serif); font-weight:600; font-style:normal; font-size:24px; color:var(--navy); margin-bottom:12px;}
+  .coming-soon-box p{font-size:15.5px; color:var(--navy-soft); line-height:1.6;}
+  .coming-soon-box .close-btn{
+    position:absolute; top:14px; right:18px; font-size:24px; color:var(--navy-soft);
+    cursor:pointer; line-height:1; background:none; border:none; font-family:var(--sans);
+  }
+  .coming-soon-box .close-btn:hover{color:var(--navy);}
   .circle-card{
     padding-top:28px; border-top:1px solid #D8DCE6;
     display:flex; flex-direction:column;
   }
-  .circle-num{
-    font-family:'Archivo', var(--sans); font-weight:400; font-style:italic; font-size:17px; margin-bottom:20px;
-  }
-  .circle-card:nth-child(1) .circle-num{color:var(--pink);}
-  .circle-card:nth-child(2) .circle-num{color:var(--cobalt);}
-  .circle-card:nth-child(3) .circle-num{color:var(--violet);}
-  .circle-card h3{font-size:26px; color:var(--navy); margin-bottom:14px; font-weight:600;}
+  .circle-card h3{font-size:34px;}
   .circle-card p{font-size:15.5px; line-height:1.6; color:var(--navy-soft); margin-bottom:24px; flex-grow:1;}
 
   /* ABOUT US — instructors */
@@ -151,12 +168,13 @@
     .circle-hero h1{font-size:38px;}
     .circle-hero .lede{font-size:22px;}
     .hero-quotes{flex-direction:column; gap:22px; margin-bottom:32px;}
-    .circles-grid{grid-template-columns:1fr;}
+    .circles-grid{grid-template-columns:1fr; gap:40px;}
+    .circle-card h3{font-size:28px;}
     .instructors-grid{grid-template-columns:1fr;}
     .about-course-grid{grid-template-columns:1fr; gap:32px;}
     .about-course-video{position:static; max-height:420px; margin-top:20px;}
     .about-course h2, .closing h2{font-size:28px;}
-    .circles .chip, .instructors .chip{font-size:24px;}
+    .instructors .chip{font-size:24px;}
     .footer-grid{grid-template-columns:1fr; gap:36px;}
     .navlinks{display:none;}
   }
@@ -200,8 +218,8 @@
     </div>
     <div class="circle-btns">
       <a class="btn" href="circle-one.html">Circle One</a>
-      <a class="btn" href="circle-two.html">Circle Two</a>
-      <a class="btn" href="circle-three.html">Circle Three</a>
+      <a class="btn" href="circle-two.html" onclick="return openComingSoon(event,'Circle Two — The Surrealist Impulse')">Circle Two</a>
+      <a class="btn" href="circle-three.html" onclick="return openComingSoon(event,'Circle Three — The City as Medium')">Circle Three</a>
       <a class="btn outline" href="art-circle-register.html">Register &amp; FAQ</a>
     </div>
   </div>
@@ -225,27 +243,27 @@
 
 <section class="circles">
   <div class="wrap">
-    <div class="section-head">
-      <span class="chip">Three circles, three semesters</span>
-    </div>
     <div class="circles-grid">
       <div class="circle-card">
-        <h3>Circle One</h3>
-        <span class="circle-num">The Art Question</span>
+        <span class="circle-label">Circle 1</span>
+        <h3>The Art Question</h3>
+        <span class="circle-theme">Power, Tastemakers, and Gatekeepers in Contemporary Art</span>
         <p>Art, Value &amp; Power. What is art, where are its boundaries, how is taste and value created, and who decides what gets shown, remembered, or left out.</p>
         <a class="link-arrow" href="circle-one.html">Learn more →</a>
       </div>
       <div class="circle-card">
-        <h3>Circle Two</h3>
-        <span class="circle-num">[Program name — coming soon]</span>
+        <span class="circle-label">Circle 2</span>
+        <h3>The Surrealist Impulse</h3>
+        <span class="circle-theme">From Surrealism to Hyperreality</span>
         <p>[Placeholder — a few sentences on what Circle Two covers.]</p>
-        <a class="link-arrow" href="circle-two.html">Learn more →</a>
+        <a class="link-arrow" href="circle-two.html" onclick="return openComingSoon(event,'Circle Two — The Surrealist Impulse')">Learn more →</a>
       </div>
       <div class="circle-card">
-        <h3>Circle Three</h3>
-        <span class="circle-num">[Program name — coming soon]</span>
+        <span class="circle-label">Circle 3</span>
+        <h3>The City as Medium</h3>
+        <span class="circle-theme">Urbanism, Social Practice, and Public Space</span>
         <p>[Placeholder — a few sentences on what Circle Three covers.]</p>
-        <a class="link-arrow" href="circle-three.html">Learn more →</a>
+        <a class="link-arrow" href="circle-three.html" onclick="return openComingSoon(event,'Circle Three — The City as Medium')">Learn more →</a>
       </div>
     </div>
   </div>
@@ -305,6 +323,25 @@
     </div>
   </div>
 </footer>
+
+<div class="coming-soon-overlay" id="comingSoonOverlay" onclick="if(event.target===this) closeComingSoon()">
+  <div class="coming-soon-box">
+    <button class="close-btn" onclick="closeComingSoon()" aria-label="Close">&times;</button>
+    <h3><span id="comingSoonName">This circle</span></h3>
+    <p>This page will open soon. In the meantime, register your interest to be the first to know when it's ready.</p>
+  </div>
+</div>
+<script>
+  function openComingSoon(e, name){
+    e.preventDefault();
+    document.getElementById('comingSoonName').textContent = name;
+    document.getElementById('comingSoonOverlay').classList.add('active');
+    return false;
+  }
+  function closeComingSoon(){
+    document.getElementById('comingSoonOverlay').classList.remove('active');
+  }
+</script>
 
 </body>
 </html>
