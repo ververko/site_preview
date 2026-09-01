@@ -144,20 +144,13 @@
   .instructors .section-head{max-width:680px; margin-bottom:56px;}
   .instructors .chip{color:var(--violet); font-size:34px;}
   .instructors-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
-  .instructor-card{display:flex; flex-direction:column;}
-  .instructor-photo{
-    aspect-ratio:1/1; border-radius:16px; overflow:hidden; margin-bottom:24px;
-    display:flex; align-items:center; justify-content:center;
-    font-family:var(--serif); font-size:15px; font-weight:600; color:rgba(255,255,255,.8); text-align:center; padding:20px;
-  }
-  .instructor-card:nth-child(1) .instructor-photo{background:linear-gradient(135deg, var(--pink) 0%, var(--violet) 100%);}
-  .instructor-card:nth-child(2) .instructor-photo{background:linear-gradient(135deg, var(--cobalt) 0%, var(--green) 100%);}
+  .instructor-card{padding-top:28px; border-top:1px solid #D8DCE6; display:flex; flex-direction:column;}
   .instructor-card h3{font-size:24px; color:var(--navy); margin-bottom:6px;}
   .instructor-role{
     display:block; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
     color:var(--violet); margin-bottom:16px;
   }
-  .instructor-card p{font-size:16px; line-height:1.6; color:var(--navy-soft);}
+  .instructor-card p{font-size:16px; line-height:1.6; color:var(--navy-soft); margin-bottom:18px;}
 
   /* CLOSING */
   .closing{padding:110px 0; text-align:center; background:var(--navy); color:var(--white);}
@@ -288,16 +281,15 @@
     </div>
     <div class="instructors-grid">
       <div class="instructor-card">
-        <div class="instructor-photo">[Photo of Vera]</div>
         <h3>Vera Korman</h3>
         <span class="instructor-role">Artist &amp; Researcher</span>
-        <p>[Placeholder — a short bio of Vera as co-instructor of The Art Circle: her angle on the program, relevant background.]</p>
+        <p>Artist and researcher with over fifteen years in higher education, curatorial practice, and cultural programming — from lecturing at art academies to curating six editions of the Musraramix Festival.</p>
+        <a class="link-arrow" href="index.html#about">More about Vera →</a>
       </div>
       <div class="instructor-card">
-        <div class="instructor-photo">[Photo of Michal]</div>
-        <h3>Michal [Last Name]</h3>
-        <span class="instructor-role">Co-Instructor</span>
-        <p>[Placeholder — a short bio of Michal: role, background, what she brings to The Art Circle.]</p>
+        <h3>Michal Meron Lesser</h3>
+        <span class="instructor-role">Architect &amp; Co-Instructor</span>
+        <p>Michal is an architect, entrepreneur, and a maker by habit. She founded Studido after struggling to find good studios every time she moved cities, and started Art Club Barcelona to build the community she was looking for. She believes human-made is the real luxury.</p>
       </div>
     </div>
     <span class="placeholder-note">⚬ Placeholder — send me photos, Michal's last name, and both bios</span>
