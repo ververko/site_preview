@@ -156,10 +156,12 @@
   .program-media.c-cobalt{background:var(--cobalt);}
   .program-card.wide{grid-column:1 / -1; aspect-ratio:21/9;}
   .program-card.video-shape{aspect-ratio:16/9;}
-  .program-card.video-shape .card-content{top:10%;}
+  .program-card.video-shape .card-content{top:8%;}
+  .program-card.video-shape .card-content h3{flex-shrink:0; margin-bottom:8px; font-size:24px;}
   .program-card.video-shape .card-content p{
-    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+    flex-shrink:0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-bottom:10px;
   }
+  .program-card.video-shape .card-content .card-links{flex-direction:column; flex-shrink:0; gap:6px;}
   .program-card.video-shape .card-scrim{
     background:linear-gradient(0deg, rgba(15,20,36,.75) 0%, rgba(15,20,36,.58) 45%, rgba(15,20,36,.3) 75%, rgba(15,20,36,.08) 100%);
   }
@@ -177,6 +179,7 @@
   .card-content .link-arrow{color:var(--white); font-size:13px;}
   .card-content .card-links{display:flex; flex-wrap:wrap; gap:22px;}
   .program-media iframe{width:100%; height:100%; border:0; display:block; position:relative; z-index:0;}
+  .program-media video{width:100%; height:100%; object-fit:cover; display:block;}
 
   /* EXAMPLE LIGHTBOX */
   .example-overlay{
@@ -320,7 +323,7 @@
           <h3>Lectures</h3>
           <p>Bringing together art history, architecture, contemporary art, and visual culture into immersive, research-based learning experiences — for museums, cultural organizations, and lifelong-learning audiences, in person and online.</p>
           <div class="card-links">
-            <a class="link-arrow" href="javascript:void(0)" onclick="openExample('lectures')">See an excerpt from "Beauty as a Subversive Power" →</a>
+            <a class="link-arrow" href="javascript:void(0)" onclick="openExample('lectures')">See a lecture excerpt →</a>
             <a class="link-arrow" href="#contact">Book a Lecture →</a>
           </div>
         </div>
@@ -339,7 +342,9 @@
       </div>
 
       <div class="program-card wide">
-        <div class="program-media placeholder c-cobalt"></div>
+        <div class="program-media">
+          <video autoplay muted loop playsinline src="assets/art-circle-hero.mp4"></video>
+        </div>
         <div class="card-scrim light"></div>
         <div class="card-content">
           <h3>The Art Circle</h3>
