@@ -156,6 +156,13 @@
   .program-media.c-cobalt{background:var(--cobalt);}
   .program-card.wide{grid-column:1 / -1; aspect-ratio:21/9;}
   .program-card.video-shape{aspect-ratio:16/9;}
+  .program-card.video-shape .card-content{top:10%;}
+  .program-card.video-shape .card-content p{
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .program-card.video-shape .card-scrim{
+    background:linear-gradient(0deg, rgba(15,20,36,.75) 0%, rgba(15,20,36,.58) 45%, rgba(15,20,36,.3) 75%, rgba(15,20,36,.08) 100%);
+  }
   .card-scrim{
     position:absolute; inset:0; z-index:1;
     background:linear-gradient(0deg, rgba(15,20,36,.68) 0%, rgba(15,20,36,.5) 40%, rgba(15,20,36,.15) 65%, rgba(15,20,36,.02) 85%);
