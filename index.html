@@ -151,11 +151,12 @@
       align-items:start;
       grid-template-columns:1.25fr 1fr;
       grid-template-areas:
-        "lectures artwalks"
-        "curatorial artwalks"
-        "workshops artcircle";
+        "lectures artcircle"
+        "curatorial artcircle"
+        "artwalks workshops";
     }
     .programs-grid .program-card{align-self:start;}
+    .programs-grid .program-card.tall-fill{align-self:stretch; aspect-ratio:auto;}
   }
   .program-card{
     position:relative; aspect-ratio:4/5; border-radius:10px; overflow:hidden; background:var(--navy);
@@ -346,7 +347,7 @@
         </div>
       </div>
 
-      <div class="program-card" style="grid-area:artcircle;">
+      <div class="program-card tall-fill" style="grid-area:artcircle;">
         <div class="program-media">
           <video autoplay muted loop playsinline src="assets/art-circle-hero.mp4"></video>
         </div>
