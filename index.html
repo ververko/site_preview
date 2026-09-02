@@ -47,6 +47,11 @@
   .navlinks{display:flex; align-items:center; gap:36px; font-size:14px; font-weight:500; color:var(--white);}
   .navlinks a:hover{color:var(--pink);}
   .navlinks .nav-cta{color:var(--pink); border-bottom:1px solid var(--pink); padding-bottom:3px;}
+  .nav-toggle{display:none; flex-direction:column; justify-content:center; gap:5px; background:none; border:none; cursor:pointer; padding:8px; margin-left:20px;}
+  .nav-toggle span{display:block; width:24px; height:2px; background:var(--white); transition:transform .2s ease, opacity .2s ease;}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
   /* HERO — text left, larger edge-flush photo right, running text floats on the photo */
   .hero{background:var(--white); color:var(--navy); overflow:hidden;}
@@ -177,7 +182,13 @@
     .program-row, .program-row.no-image, .program-row.reverse{grid-template-columns:1fr;}
     .program-row.reverse .program-media{order:0;}
     .footer-grid{grid-template-columns:1fr; gap:36px;}
-    .navlinks{display:none;}
+    .nav-toggle{display:flex;}
+    .navlinks{
+      display:none; position:absolute; top:100%; left:0; right:0; background:var(--navy);
+      flex-direction:column; align-items:flex-start; gap:0; padding:10px 24px 24px;
+    }
+    .navlinks.open{display:flex;}
+    .navlinks a{width:100%; padding:14px 0; border-top:1px solid rgba(255,255,255,.12);}
     .closing h2{font-size:32px;}
   }
 </style>
@@ -186,10 +197,11 @@
 
 <header>
   <nav class="wrap" style="justify-content:flex-end;">
+    <button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav(this)"><span></span><span></span><span></span></button>
     <div class="navlinks">
+      <a href="index.html">Home</a>
       <a href="#about">About</a>
-      <a href="#programs">Programs</a>
-      <a href="#programs">Selected Work</a>
+      <a href="#programs">Areas of Practice</a>
       <a href="writing.html">Writing</a>
       <a href="the-art-circle.html">The Art Circle</a>
       <a class="nav-cta" href="#contact">Contact</a>
@@ -351,6 +363,13 @@
     </div>
   </div>
 </footer>
+
+<script>
+  function toggleMobileNav(btn){
+    btn.classList.toggle('open');
+    document.querySelector('.navlinks').classList.toggle('open');
+  }
+</script>
 
 </body>
 </html>
