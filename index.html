@@ -67,6 +67,16 @@
   }
   .hero-ctas .text-link:hover{opacity:.55;}
   .hero-ctas .text-link.pink{color:var(--pink); border-color:var(--pink);}
+  .hero-ctas .text-link.hot{color:var(--pink); border-color:var(--pink); display:inline-flex; align-items:center; gap:9px;}
+  .pulse-dot{
+    width:8px; height:8px; border-radius:50%; background:var(--pink); flex-shrink:0;
+    animation:pulse-dot 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse-dot{
+    0%{transform:scale(1); box-shadow:0 0 0 0 rgba(255,61,127,.5);}
+    70%{transform:scale(1.15); box-shadow:0 0 0 7px rgba(255,61,127,0);}
+    100%{transform:scale(1); box-shadow:0 0 0 0 rgba(255,61,127,0);}
+  }
   .hero-photo{position:relative; overflow:hidden; background:var(--navy); aspect-ratio:1/1;}
   .hero-photo img{object-position:center 12%; filter:grayscale(.2) contrast(1.03);}
 
@@ -195,7 +205,7 @@
       <div class="hero-ctas">
         <a class="text-link" href="#programs">Explore Areas of Practice →</a>
         <a class="text-link pink" href="writing.html">Writings →</a>
-        <a class="text-link" href="the-art-circle.html">The Art Circle →</a>
+        <a class="text-link hot" href="the-art-circle.html"><span class="pulse-dot"></span>The Art Circle →</a>
       </div>
     </div>
     <div class="hero-photo">
