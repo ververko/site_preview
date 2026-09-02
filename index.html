@@ -140,6 +140,12 @@
   }
   .program-card .program-media{position:absolute; inset:0; z-index:0; border-radius:0;}
   .program-card .program-media img{filter:saturate(1.05) contrast(1.02);}
+  .play-btn{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:2;
+    width:64px; height:64px; border-radius:50%; background:var(--pink); color:var(--white);
+    display:flex; align-items:center; justify-content:center; font-size:22px; transition:transform .16s ease;
+  }
+  .program-card .program-media:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);}
   .program-media.c-pink{background:var(--pink);}
   .program-media.c-violet{background:var(--violet);}
   .program-media.c-cobalt{background:var(--cobalt);}
@@ -299,9 +305,10 @@
       </div>
 
       <div class="program-card">
-        <div class="program-media">
-          <img src="assets/about-silhouette.jpg" alt="Musraramix International Art Festival">
-        </div>
+        <a class="program-media" href="https://www.youtube.com/watch?v=vyil0vXsonk" target="_blank" aria-label="Watch: Musraramix International Art Festival highlights">
+          <img src="https://img.youtube.com/vi/vyil0vXsonk/hqdefault.jpg" alt="Musraramix International Art Festival video thumbnail">
+          <span class="play-btn">▶</span>
+        </a>
         <div class="card-scrim"></div>
         <div class="card-content">
           <h3>Curatorial Projects</h3>
@@ -309,18 +316,6 @@
           <a class="link-arrow" href="#contact">Collaborate on a Project →</a>
         </div>
       </div>
-    </div>
-
-    <div style="margin-top:40px;">
-      <p style="color:var(--navy-soft); font-size:15px; margin-bottom:14px;">Watch: Musraramix International Art Festival highlights</p>
-      <a href="https://www.youtube.com/watch?v=vyil0vXsonk" target="_blank"
-         style="display:block; position:relative; max-width:640px; aspect-ratio:16/9; border-radius:10px; overflow:hidden;">
-        <img src="https://img.youtube.com/vi/vyil0vXsonk/hqdefault.jpg" alt="Musraramix International Art Festival video thumbnail" style="width:100%; height:100%; object-fit:cover;">
-        <span style="
-          position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-          width:76px; height:76px; border-radius:50%; background:var(--pink);
-          display:flex; align-items:center; justify-content:center; color:white; font-size:26px;">▶</span>
-      </a>
     </div>
   </div>
 </section>
