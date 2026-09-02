@@ -140,12 +140,6 @@
   }
   .program-card .program-media{position:absolute; inset:0; z-index:0; border-radius:0;}
   .program-card .program-media img{filter:saturate(1.05) contrast(1.02);}
-  .play-btn{
-    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:2;
-    width:64px; height:64px; border-radius:50%; background:var(--pink); color:var(--white);
-    display:flex; align-items:center; justify-content:center; font-size:22px; transition:transform .16s ease;
-  }
-  .program-card .program-media:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);}
   .program-media.c-pink{background:var(--pink);}
   .program-media.c-violet{background:var(--violet);}
   .program-media.c-cobalt{background:var(--cobalt);}
@@ -159,7 +153,34 @@
   .card-content h3{margin-bottom:12px; font-size:34px; color:var(--white);}
   .card-content p{font-size:15px; line-height:1.5; color:#E4E7F2; margin-bottom:14px; max-width:400px;}
   .card-content .link-arrow{color:var(--white); font-size:13px;}
+  .card-content .card-links{display:flex; flex-wrap:wrap; gap:22px;}
   .program-media iframe{width:100%; height:100%; border:0; display:block; position:relative; z-index:0;}
+
+  /* EXAMPLE LIGHTBOX */
+  .example-overlay{
+    display:none; position:fixed; inset:0; z-index:300; background:rgba(15,20,36,.85);
+    align-items:center; justify-content:center; padding:24px;
+  }
+  .example-overlay.active{display:flex;}
+  .example-box{
+    background:var(--white); border-radius:16px; overflow:hidden; max-width:720px; width:100%;
+    max-height:90vh; overflow-y:auto; position:relative;
+  }
+  .example-media{width:100%; aspect-ratio:16/9; background:var(--navy);}
+  .example-media iframe{width:100%; height:100%; border:0; display:block;}
+  .example-info{padding:32px 36px 40px;}
+  .example-kicker{
+    display:block; font-family:'Archivo', var(--sans); font-size:13px; font-weight:700;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--pink); margin-bottom:10px;
+  }
+  .example-info h3{font-size:26px; color:var(--navy); margin-bottom:16px;}
+  .example-info p{font-size:15.5px; line-height:1.65; color:var(--navy-soft); margin-bottom:12px;}
+  .example-box .close-btn{
+    position:absolute; top:14px; right:16px; font-size:24px; color:var(--white);
+    background:rgba(15,20,36,.45); width:36px; height:36px; border-radius:50%; border:none;
+    cursor:pointer; z-index:2; line-height:1; font-family:var(--sans);
+  }
+  .example-box .close-btn:hover{background:rgba(15,20,36,.7);}
   @media (max-width:880px){
     .programs-grid{grid-template-columns:1fr;}
     .program-card{aspect-ratio:1/1.05;}
@@ -305,15 +326,17 @@
       </div>
 
       <div class="program-card">
-        <a class="program-media" href="https://www.youtube.com/watch?v=vyil0vXsonk" target="_blank" aria-label="Watch: Musraramix International Art Festival highlights">
-          <img src="https://img.youtube.com/vi/vyil0vXsonk/hqdefault.jpg" alt="Musraramix International Art Festival video thumbnail">
-          <span class="play-btn">▶</span>
-        </a>
+        <div class="program-media">
+          <img src="https://img.youtube.com/vi/vyil0vXsonk/hqdefault.jpg" alt="Musraramix International Art Festival">
+        </div>
         <div class="card-scrim"></div>
         <div class="card-content">
           <h3>Curatorial Projects</h3>
           <p>Exhibitions, festivals, and interdisciplinary cultural projects that bring together artistic inquiry, historical research, and public engagement.</p>
-          <a class="link-arrow" href="#contact">Collaborate on a Project →</a>
+          <div class="card-links">
+            <a class="link-arrow" href="javascript:void(0)" onclick="openExample('curatorial')">See examples →</a>
+            <a class="link-arrow" href="#contact">Collaborate on a Project →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -359,10 +382,47 @@
   </div>
 </footer>
 
+<div class="example-overlay" id="exampleOverlay" onclick="if(event.target===this) closeExample()">
+  <div class="example-box">
+    <button class="close-btn" onclick="closeExample()" aria-label="Close">&times;</button>
+    <div class="example-media" id="exampleMedia"></div>
+    <div class="example-info">
+      <span class="example-kicker" id="exampleKicker"></span>
+      <h3 id="exampleTitle"></h3>
+      <div id="exampleBody"></div>
+    </div>
+  </div>
+</div>
+
 <script>
   function toggleMobileNav(btn){
     btn.classList.toggle('open');
     document.querySelector('.navlinks').classList.toggle('open');
+  }
+
+  var examples = {
+    curatorial: {
+      kicker: 'Curatorial Projects — Case Study',
+      title: 'Musraramix International Art Festival',
+      videoId: 'vyil0vXsonk',
+      body: '<p>Six consecutive editions (2019–2024) as Lead Curator of the Musraramix International Art Festival in Jerusalem — an interdisciplinary festival bringing together exhibitions, performance, and public programs across the city.</p>'
+    }
+  };
+
+  function openExample(key){
+    var d = examples[key];
+    if(!d) return;
+    document.getElementById('exampleMedia').innerHTML = d.videoId
+      ? '<iframe src="https://www.youtube.com/embed/' + d.videoId + '" title="' + d.title + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      : '';
+    document.getElementById('exampleKicker').textContent = d.kicker;
+    document.getElementById('exampleTitle').textContent = d.title;
+    document.getElementById('exampleBody').innerHTML = d.body;
+    document.getElementById('exampleOverlay').classList.add('active');
+  }
+  function closeExample(){
+    document.getElementById('exampleOverlay').classList.remove('active');
+    document.getElementById('exampleMedia').innerHTML = '';
   }
 </script>
 
