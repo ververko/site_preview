@@ -113,6 +113,17 @@
     transition:opacity .16s ease;
   }
   .about-copy .text-link:hover{opacity:.55;}
+
+  /* ARTISTIC PRACTICE STRIP */
+  .artistic-strip{padding:64px 0; border-top:1px solid #E7E9F0; border-bottom:1px solid #E7E9F0;}
+  .artistic-strip .wrap{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:28px;}
+  .artistic-strip .chip{color:var(--cobalt); margin-bottom:10px;}
+  .artistic-strip p{font-size:17px; line-height:1.6; color:var(--navy-soft); max-width:560px;}
+  .artistic-strip .text-link{
+    font-family:'Archivo', var(--sans); font-size:16px; font-weight:400; color:var(--navy);
+    border-bottom:1px solid var(--navy); padding-bottom:4px; transition:opacity .16s ease; flex-shrink:0;
+  }
+  .artistic-strip .text-link:hover{opacity:.55;}
   @media (max-width:880px){
     .hero-split{grid-template-columns:1fr;}
     .hero-copy{padding:64px 24px;}
@@ -272,6 +283,16 @@
       <p>Based in Barcelona, Vera designs independent educational programs, philosophical walking tours, and specialized workshops, collaborating with universities, cultural organizations, corporate clients, and global audiences.</p>
       <a class="text-link" href="/about">More about Vera →</a>
     </div>
+  </div>
+</section>
+
+<section class="artistic-strip">
+  <div class="wrap">
+    <div>
+      <span class="chip">Artistic Practice</span>
+      <p>Alongside her research, teaching, and curatorial work, Vera maintains an independent artistic practice — an ongoing, personal body of work in its own right.</p>
+    </div>
+    <a class="text-link" href="https://verakorman.info" target="_blank">Visit verakorman.info →</a>
   </div>
 </section>
 
