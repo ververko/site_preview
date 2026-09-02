@@ -157,10 +157,13 @@
   .program-card.wide{grid-column:1 / -1; aspect-ratio:21/9;}
   .card-scrim{
     position:absolute; inset:0; z-index:1;
-    background:linear-gradient(0deg, rgba(15,20,36,.58) 0%, rgba(15,20,36,.32) 45%, rgba(15,20,36,.03) 75%);
+    background:linear-gradient(0deg, rgba(15,20,36,.68) 0%, rgba(15,20,36,.5) 40%, rgba(15,20,36,.15) 65%, rgba(15,20,36,.02) 85%);
   }
-  .card-scrim.light{background:linear-gradient(0deg, rgba(15,20,36,.32) 0%, rgba(15,20,36,.08) 55%, rgba(15,20,36,0) 80%);}
-  .card-content{position:absolute; z-index:2; left:0; right:0; bottom:0; padding:32px;}
+  .card-scrim.light{background:linear-gradient(0deg, rgba(15,20,36,.42) 0%, rgba(15,20,36,.24) 40%, rgba(15,20,36,.06) 65%, rgba(15,20,36,0) 85%);}
+  .card-content{
+    position:absolute; z-index:2; left:0; right:0; top:38%; bottom:0; padding:0 32px 32px;
+    display:flex; flex-direction:column; justify-content:flex-start;
+  }
   .card-content h3{margin-bottom:12px; font-size:34px; color:var(--white);}
   .card-content p{font-size:15px; line-height:1.5; color:#E4E7F2; margin-bottom:14px; max-width:400px;}
   .card-content .link-arrow{color:var(--white); font-size:13px;}
@@ -307,7 +310,7 @@
           <h3>Lectures</h3>
           <p>Bringing together art history, architecture, contemporary art, and visual culture into immersive, research-based learning experiences — for museums, cultural organizations, and lifelong-learning audiences, in person and online.</p>
           <div class="card-links">
-            <a class="link-arrow" href="javascript:void(0)" onclick="openExample('lectures')">See examples →</a>
+            <a class="link-arrow" href="javascript:void(0)" onclick="openExample('lectures')">See an excerpt from "Beauty as a Subversive Power" →</a>
             <a class="link-arrow" href="#contact">Book a Lecture →</a>
           </div>
         </div>
@@ -439,7 +442,7 @@
     },
     lectures: {
       kicker: 'Lectures — Case Study',
-      title: 'Paris · Florence · Barcelona',
+      title: 'Beauty as a Subversive Power — A Different Architecture Tour of Barcelona',
       video: 'assets/lecture-katedra.mp4',
       body: '<p>Excerpt from a lecture Vera gave at the Cátedra.</p><p><a href="https://www.katedra.co.il/meeting/%d7%a4%d7%a8%d7%99%d7%96-%c2%b7-%d7%a4%d7%99%d7%a8%d7%a0%d7%a6%d7%94-%c2%b7-%d7%91%d7%a8%d7%a6%d7%9c%d7%95%d7%a0%d7%94/" target="_blank">Watch the full lecture on Katedra →</a></p>'
     }
