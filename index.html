@@ -304,8 +304,10 @@
 
     <div class="programs-grid">
       <div class="program-card">
-        <div class="program-media placeholder c-pink"></div>
-        <div class="card-scrim light"></div>
+        <div class="program-media">
+          <img src="assets/lecture-katedra-poster.jpg" alt="Vera Korman lecturing at the Cátedra">
+        </div>
+        <div class="card-scrim"></div>
         <div class="card-content">
           <h3>Lectures</h3>
           <p>Bringing together art history, architecture, contemporary art, and visual culture into immersive, research-based learning experiences — for museums, cultural organizations, and lifelong-learning audiences, in person and online.</p>
@@ -339,12 +341,17 @@
       </div>
 
       <div class="program-card">
-        <div class="program-media placeholder c-violet"></div>
-        <div class="card-scrim light"></div>
+        <div class="program-media">
+          <img src="assets/workshop-slice-of-life-poster.jpg" alt="Participants collaging together in a Vera Korman workshop">
+        </div>
+        <div class="card-scrim"></div>
         <div class="card-content">
           <h3>Workshops &amp; Educational Programs</h3>
           <p>Hands-on, interdisciplinary workshops combining discussion, observation, and artistic practice — for museums, schools, companies, and private groups.</p>
-          <a class="link-arrow" href="#contact">Schedule a Workshop →</a>
+          <div class="card-links">
+            <a class="link-arrow" href="javascript:void(0)" onclick="openExample('workshops')">See examples →</a>
+            <a class="link-arrow" href="#contact">Schedule a Workshop →</a>
+          </div>
         </div>
       </div>
 
@@ -444,7 +451,15 @@
       kicker: 'Lectures — Case Study',
       title: 'Beauty as a Subversive Power — A Different Architecture Tour of Barcelona',
       video: 'assets/lecture-katedra.mp4',
+      poster: 'assets/lecture-katedra-poster.jpg',
       body: '<p>Excerpt from a lecture Vera gave at the Cátedra.</p><p><a href="https://www.katedra.co.il/meeting/%d7%a4%d7%a8%d7%99%d7%96-%c2%b7-%d7%a4%d7%99%d7%a8%d7%a0%d7%a6%d7%94-%c2%b7-%d7%91%d7%a8%d7%a6%d7%9c%d7%95%d7%a0%d7%94/" target="_blank">Watch the full lecture on Katedra →</a></p>'
+    },
+    workshops: {
+      kicker: 'Workshops — Case Study',
+      title: 'Slice of Life',
+      video: 'assets/workshop-slice-of-life.mp4',
+      poster: 'assets/workshop-slice-of-life-poster.jpg',
+      body: '<p>A collage-based workshop bringing together discussion, observation, and hands-on artistic practice in a small-group setting.</p>'
     }
   };
 
@@ -455,7 +470,7 @@
     if(d.videoId){
       media = '<iframe src="https://www.youtube.com/embed/' + d.videoId + '" title="' + d.title + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
     } else if(d.video){
-      media = '<video controls autoplay playsinline src="' + d.video + '"></video>';
+      media = '<video controls autoplay playsinline poster="' + (d.poster || '') + '" src="' + d.video + '"></video>';
     }
     document.getElementById('exampleMedia').innerHTML = media;
     document.getElementById('exampleKicker').textContent = d.kicker;
