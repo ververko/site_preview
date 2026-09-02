@@ -179,6 +179,7 @@
   }
   .example-media{width:100%; aspect-ratio:16/9; background:var(--navy);}
   .example-media iframe{width:100%; height:100%; border:0; display:block;}
+  .example-media video{width:100%; height:100%; object-fit:contain; display:block; background:var(--navy);}
   .example-info{padding:32px 36px 40px;}
   .example-kicker{
     display:block; font-family:'Archivo', var(--sans); font-size:13px; font-weight:700;
@@ -300,7 +301,10 @@
         <div class="card-content">
           <h3>Lectures</h3>
           <p>Bringing together art history, architecture, contemporary art, and visual culture into immersive, research-based learning experiences — for museums, cultural organizations, and lifelong-learning audiences, in person and online.</p>
-          <a class="link-arrow" href="#contact">Book a Lecture →</a>
+          <div class="card-links">
+            <a class="link-arrow" href="javascript:void(0)" onclick="openExample('lectures')">See examples →</a>
+            <a class="link-arrow" href="#contact">Book a Lecture →</a>
+          </div>
         </div>
       </div>
 
@@ -427,15 +431,25 @@
       title: 'Musraramix International Art Festival',
       videoId: 'vyil0vXsonk',
       body: '<p>Six consecutive editions (2019–2024) as Lead Curator of the Musraramix International Art Festival in Jerusalem — an interdisciplinary festival bringing together exhibitions, performance, and public programs across the city.</p>'
+    },
+    lectures: {
+      kicker: 'Lectures — Case Study',
+      title: 'Lecture at the Cátedra',
+      video: 'assets/lecture-katedra.mp4',
+      body: '<p>Excerpt from a lecture Vera gave at the Cátedra.</p>'
     }
   };
 
   function openExample(key){
     var d = examples[key];
     if(!d) return;
-    document.getElementById('exampleMedia').innerHTML = d.videoId
-      ? '<iframe src="https://www.youtube.com/embed/' + d.videoId + '" title="' + d.title + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-      : '';
+    var media = '';
+    if(d.videoId){
+      media = '<iframe src="https://www.youtube.com/embed/' + d.videoId + '" title="' + d.title + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    } else if(d.video){
+      media = '<video controls autoplay playsinline src="' + d.video + '"></video>';
+    }
+    document.getElementById('exampleMedia').innerHTML = media;
     document.getElementById('exampleKicker').textContent = d.kicker;
     document.getElementById('exampleTitle').textContent = d.title;
     document.getElementById('exampleBody').innerHTML = d.body;
