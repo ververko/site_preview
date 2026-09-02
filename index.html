@@ -187,6 +187,11 @@
   }
   .example-info h3{font-size:26px; color:var(--navy); margin-bottom:16px;}
   .example-info p{font-size:15.5px; line-height:1.65; color:var(--navy-soft); margin-bottom:12px;}
+  .example-info a{
+    font-family:'Archivo', var(--sans); font-weight:400; color:var(--navy);
+    border-bottom:1px solid var(--navy); padding-bottom:2px; transition:opacity .16s ease;
+  }
+  .example-info a:hover{opacity:.55;}
   .example-box .close-btn{
     position:absolute; top:14px; right:16px; font-size:24px; color:var(--white);
     background:rgba(15,20,36,.45); width:36px; height:36px; border-radius:50%; border:none;
@@ -434,9 +439,9 @@
     },
     lectures: {
       kicker: 'Lectures — Case Study',
-      title: 'Lecture at the Cátedra',
+      title: 'Paris · Florence · Barcelona',
       video: 'assets/lecture-katedra.mp4',
-      body: '<p>Excerpt from a lecture Vera gave at the Cátedra.</p>'
+      body: '<p>Excerpt from a lecture Vera gave at the Cátedra.</p><p><a href="https://www.katedra.co.il/meeting/%d7%a4%d7%a8%d7%99%d7%96-%c2%b7-%d7%a4%d7%99%d7%a8%d7%a0%d7%a6%d7%94-%c2%b7-%d7%91%d7%a8%d7%a6%d7%9c%d7%95%d7%a0%d7%94/" target="_blank">Watch the full lecture on Katedra →</a></p>'
     }
   };
 
