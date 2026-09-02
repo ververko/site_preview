@@ -146,18 +146,6 @@
     .card-content h3{font-size:26px;}
   }
 
-  /* HIGHLIGHTS */
-  .highlights{background:var(--white); padding:110px 0;}
-  .highlights .chip{color:var(--violet); margin-bottom:12px;}
-  .highlights h2{font-size:40px; max-width:560px; margin-bottom:70px; color:var(--navy);}
-  .stat-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:40px;}
-  .stat-grid p{font-size:15px; color:var(--navy-soft); line-height:1.55;}
-  .stat-num{font-family:var(--serif); font-weight:700; font-size:56px; margin-bottom:12px; display:block;}
-  .stat-grid > div:nth-child(1) .stat-num{color:var(--pink);}
-  .stat-grid > div:nth-child(2) .stat-num{color:var(--cobalt);}
-  .stat-grid > div:nth-child(3) .stat-num{color:var(--green);}
-  .stat-grid > div:nth-child(4) .stat-num{color:var(--violet);}
-
   /* CLOSING CTA */
   .closing{padding:130px 0; text-align:center; background:var(--pink); color:var(--white);}
   .closing .chip{color:var(--white); margin-bottom:14px;}
@@ -178,7 +166,6 @@
     .wrap{padding:0 24px;}
     .program-row, .program-row.no-image, .program-row.reverse{grid-template-columns:1fr;}
     .program-row.reverse .program-media{order:0;}
-    .stat-grid{grid-template-columns:1fr 1fr; row-gap:40px;}
     .footer-grid{grid-template-columns:1fr; gap:36px;}
     .navlinks{display:none;}
     .closing h2{font-size:32px;}
@@ -192,7 +179,7 @@
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#programs">Programs</a>
-      <a href="#highlights">Selected Work</a>
+      <a href="#programs">Selected Work</a>
       <a href="writing.html">Writing</a>
       <a href="the-art-circle.html">The Art Circle</a>
       <a class="nav-cta" href="#contact">Contact</a>
@@ -208,6 +195,7 @@
       <div class="hero-ctas">
         <a class="text-link" href="#programs">Explore Areas of Practice →</a>
         <a class="text-link pink" href="writing.html">Writings →</a>
+        <a class="text-link" href="the-art-circle.html">The Art Circle →</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -268,6 +256,16 @@
         </div>
       </div>
 
+      <div class="program-card wide">
+        <div class="program-media placeholder c-cobalt"></div>
+        <div class="card-scrim light"></div>
+        <div class="card-content">
+          <h3>The Art Circle</h3>
+          <p>A structured educational journey in three parts — an independent study program moving through history, symbol, and practice. Currently in development.</p>
+          <a class="link-arrow" href="the-art-circle.html">Explore The Art Circle →</a>
+        </div>
+      </div>
+
       <div class="program-card">
         <div class="program-media placeholder c-violet"></div>
         <div class="card-scrim light"></div>
@@ -289,16 +287,6 @@
           <a class="link-arrow" href="#contact">Collaborate on a Project →</a>
         </div>
       </div>
-
-      <div class="program-card wide">
-        <div class="program-media placeholder c-cobalt"></div>
-        <div class="card-scrim light"></div>
-        <div class="card-content">
-          <h3>The Art Circle</h3>
-          <p>A structured educational journey in three parts — an independent study program moving through history, symbol, and practice. Currently in development.</p>
-          <a class="link-arrow" href="the-art-circle.html">Explore The Art Circle →</a>
-        </div>
-      </div>
     </div>
 
     <div style="margin-top:40px;">
@@ -311,31 +299,6 @@
           width:76px; height:76px; border-radius:50%; background:var(--pink);
           display:flex; align-items:center; justify-content:center; color:white; font-size:26px;">▶</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<section class="highlights" id="highlights">
-  <div class="wrap">
-    <span class="chip">Selected Work</span>
-    <h2>Professional highlights, in brief</h2>
-    <div class="stat-grid">
-      <div>
-        <span class="stat-num">6</span>
-        <p>Consecutive editions as Lead Curator of the Musraramix International Art Festival, Jerusalem (2019–2024)</p>
-      </div>
-      <div>
-        <span class="stat-num">3</span>
-        <p>Museums exhibited at internationally, including the Tel Aviv Museum of Art and Museum Boijmans Van Beuningen, Rotterdam</p>
-      </div>
-      <div>
-        <span class="stat-num">15+</span>
-        <p>Years teaching contemporary art, video art, and visual culture across institutions in Israel and Spain</p>
-      </div>
-      <div>
-        <span class="stat-num">Press</span>
-        <p>Featured in The Jerusalem Post, Haaretz, and Portfolio magazine</p>
-      </div>
     </div>
   </div>
 </section>
