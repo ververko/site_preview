@@ -146,6 +146,16 @@
   .section-head .chip{color:var(--green); margin-bottom:12px;}
   .section-head h2{font-size:44px; color:var(--navy);}
   .programs-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  @media (min-width:881px){
+    .programs-grid{
+      align-items:start;
+      grid-template-areas:
+        "lectures artwalks"
+        "curatorial artwalks"
+        "workshops artcircle";
+    }
+    .programs-grid .program-card{align-self:start;}
+  }
   .program-card{
     position:relative; aspect-ratio:4/5; border-radius:10px; overflow:hidden; background:var(--navy);
   }
@@ -154,7 +164,6 @@
   .program-media.c-pink{background:var(--pink);}
   .program-media.c-violet{background:var(--violet);}
   .program-media.c-cobalt{background:var(--cobalt);}
-  .program-card.wide{grid-column:1 / -1; aspect-ratio:21/9;}
   .program-card.video-shape{aspect-ratio:16/9;}
   .program-card.video-shape .card-content h3{font-size:26px;}
   .program-card.video-shape .card-content p{
@@ -211,7 +220,6 @@
   @media (max-width:880px){
     .programs-grid{grid-template-columns:1fr;}
     .program-card{aspect-ratio:1/1.05;}
-    .program-card.wide{aspect-ratio:1/1.05;}
     .card-content h3{font-size:26px;}
   }
 
@@ -310,7 +318,7 @@
     </div>
 
     <div class="programs-grid">
-      <div class="program-card video-shape">
+      <div class="program-card video-shape" style="grid-area:lectures;">
         <div class="program-media">
           <img src="assets/lecture-katedra-poster.jpg" alt="Vera Korman lecturing at the Cátedra">
         </div>
@@ -325,7 +333,7 @@
         </div>
       </div>
 
-      <div class="program-card">
+      <div class="program-card" style="grid-area:artwalks;">
         <div class="program-media">
           <img src="assets/artwalks.jpg" alt="Vera Korman guiding participants through Barcelona's Modernisme architecture">
         </div>
@@ -337,7 +345,7 @@
         </div>
       </div>
 
-      <div class="program-card wide">
+      <div class="program-card" style="grid-area:artcircle;">
         <div class="program-media">
           <video autoplay muted loop playsinline src="assets/art-circle-hero.mp4"></video>
         </div>
@@ -349,7 +357,7 @@
         </div>
       </div>
 
-      <div class="program-card">
+      <div class="program-card" style="grid-area:workshops;">
         <div class="program-media">
           <img src="assets/workshop-slice-of-life-poster.jpg" alt="Participants collaging together in a Vera Korman workshop" style="object-position:50% 32%;">
         </div>
@@ -364,7 +372,7 @@
         </div>
       </div>
 
-      <div class="program-card video-shape">
+      <div class="program-card video-shape" style="grid-area:curatorial;">
         <div class="program-media">
           <img src="https://img.youtube.com/vi/vyil0vXsonk/maxresdefault.jpg" alt="Musraramix International Art Festival">
         </div>
