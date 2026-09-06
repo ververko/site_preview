@@ -83,9 +83,14 @@
     font-family:'Archivo', var(--sans); font-size:12px; font-weight:500; letter-spacing:.03em;
     text-transform:uppercase; color:rgba(255,255,255,.55);
   }
-  .circle-btns{display:flex; flex-wrap:wrap; gap:28px;}
+  .circle-btns{display:flex; flex-wrap:wrap; align-items:center; gap:28px;}
   .circle-btns .btn{color:var(--white); border-bottom-color:var(--white);}
   .circle-btns .btn.outline{color:var(--pink); border-bottom-color:var(--pink);}
+  .circle-btns .btn.primary{
+    background:var(--pink); color:var(--white); border-bottom:none; border-radius:999px;
+    padding:14px 28px; font-weight:600;
+  }
+  .circle-btns .btn.primary:hover{opacity:.85;}
   .hero-credit{max-width:420px; text-align:right; margin-left:auto; margin-top:36px;}
   .hero-credit p{font-size:11px; line-height:1.5; color:rgba(255,255,255,.55); margin-bottom:4px; white-space:nowrap;}
   .hero-credit p:last-child{margin-bottom:0;}
@@ -223,7 +228,7 @@
   <div class="wrap">
     <span class="chip">You're invited</span>
     <h1>The Art Circle</h1>
-    <p class="lede">Step inside creative minds. Each circle is a semester built around one question — researched, discussed, and lived: through the artists and professionals behind it, and the space between the museum's galleries and its backstage.</p>
+    <p class="lede">Step inside creative minds. Each circle is a semester built around one question, researched, discussed, and experienced firsthand: through the artists and professionals behind it, and the space between the museum's galleries and its backstage.</p>
     <div class="hero-quotes">
       <div class="hero-quote active">
         <p>"Art is a lie that makes us realize truth."</p>
@@ -239,10 +244,8 @@
       </div>
     </div>
     <div class="circle-btns">
-      <a class="btn" href="circle-one.html">Circle One</a>
-      <a class="btn" href="circle-two.html" onclick="return openComingSoon(event,'Circle Two: The Surrealist Impulse')">Circle Two</a>
-      <a class="btn" href="circle-three.html" onclick="return openComingSoon(event,'Circle Three: The City as Medium')">Circle Three</a>
-      <a class="btn outline" href="art-circle-register.html">Register &amp; FAQ</a>
+      <a class="btn primary" href="circle-one.html">Register for Circle One</a>
+      <a class="btn outline" href="art-circle-register.html">FAQ</a>
     </div>
     <div class="hero-credit">
       <p>A fragment from At Land, a film by Maya Deren, 1944.</p>
@@ -259,7 +262,7 @@
       </div>
       <p><strong>The Art Circle is an independent forum in Barcelona for looking closely at contemporary art and visual culture.</strong> Our questions move between the foundational and the urgent, from what makes something contemporary art and who decides taste, to the pressing concerns of our moment: identity, ecology, urbanism, and new forms of thought.</p>
       <p>Each circle takes one theme and explores it across three sessions, a month apart, each through a different angle and method.</p>
-      <p>Each question is examined in depth through a different methodology and a distinct conceptual lens: through encounters with curators, collectors, and artists, through fields of knowledge and research of contemporary art, and through the historical milestones that shaped it.</p>
+      <p>Each question is examined in depth through a different methodology and a distinct conceptual lens: through encounters with curators, collectors, and artists, through fields of knowledge and research of contemporary art, and through the historical milestones that shaped it. We move through the museum's galleries as well as its backstage, where these questions are actually decided.</p>
     </div>
     <div class="about-course-video">
       <video autoplay muted loop playsinline src="assets/about-course-video.mp4"></video>
