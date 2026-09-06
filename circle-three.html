@@ -69,6 +69,20 @@
     background:#F4F1FE; border:1px dashed var(--violet); border-radius:8px; padding:10px 16px;
   }
 
+  .coming-soon-overlay{
+    display:none; position:fixed; inset:0; z-index:200; background:rgba(15,20,36,.75);
+    align-items:center; justify-content:center; padding:24px;
+  }
+  .coming-soon-overlay.active{display:flex;}
+  .coming-soon-box{background:var(--white); border-radius:16px; padding:48px 40px; max-width:420px; text-align:center; position:relative;}
+  .coming-soon-box h3{font-family:var(--serif); font-weight:600; font-style:normal; font-size:24px; color:var(--navy); margin-bottom:12px;}
+  .coming-soon-box p{font-size:15.5px; color:var(--navy-soft); line-height:1.6;}
+  .coming-soon-box .close-btn{
+    position:absolute; top:14px; right:18px; font-size:24px; color:var(--navy-soft);
+    cursor:pointer; line-height:1; background:none; border:none; font-family:var(--sans);
+  }
+  .coming-soon-box .close-btn:hover{color:var(--navy);}
+
   .circle-nav-footer{
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
     padding:40px 0; border-top:1px solid #E7E9F0; margin-top:20px;
@@ -121,13 +135,13 @@
 
 <section class="wrap page-head">
   <span class="circle-num">3</span>
-  <span class="kicker">The Art Circle — Part Three</span>
+  <span class="kicker">The Art Circle: Part Three</span>
   <h1>Circle Three</h1>
   <p>[Placeholder — one or two sentences introducing this circle: its theme and its place in the overall program.]</p>
   <div class="circle-links">
     <a class="btn small outline" href="the-art-circle.html">← Overview</a>
     <a class="btn small outline" href="circle-one.html">Circle One</a>
-    <a class="btn small outline" href="circle-two.html">Circle Two</a>
+    <a class="btn small outline" href="circle-two.html" onclick="return openComingSoon(event,'Circle Two: The Surrealist Impulse')">Circle Two</a>
     <a class="btn small outline" href="art-circle-register.html">Register &amp; FAQ</a>
   </div>
 </section>
@@ -146,7 +160,7 @@
 
 <div class="wrap">
   <div class="circle-nav-footer">
-    <a href="circle-two.html">← Back to Circle Two</a>
+    <a href="circle-two.html" onclick="return openComingSoon(event,'Circle Two: The Surrealist Impulse')">← Back to Circle Two</a>
     <a href="art-circle-register.html">Continue to Register &amp; FAQ →</a>
   </div>
 </div>
@@ -183,11 +197,30 @@
   </div>
 </footer>
 
+<div class="coming-soon-overlay" id="comingSoonOverlay" onclick="if(event.target===this) closeComingSoon()">
+  <div class="coming-soon-box">
+    <button class="close-btn" onclick="closeComingSoon()" aria-label="Close">&times;</button>
+    <h3><span id="comingSoonName">This circle</span></h3>
+    <p>This page will open soon. In the meantime, register your interest to be the first to know when it's ready.</p>
+  </div>
+</div>
 <script>
+  function openComingSoon(e, name){
+    if(e) e.preventDefault();
+    document.getElementById('comingSoonName').textContent = name;
+    document.getElementById('comingSoonOverlay').classList.add('active');
+    return false;
+  }
+  function closeComingSoon(){
+    document.getElementById('comingSoonOverlay').classList.remove('active');
+  }
+
   function toggleMobileNav(btn){
     btn.classList.toggle('open');
     document.querySelector('.navlinks').classList.toggle('open');
   }
+
+  openComingSoon(null, 'Circle Three: The City as Medium');
 </script>
 
 </body>

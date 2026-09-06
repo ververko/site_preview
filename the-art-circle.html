@@ -60,6 +60,7 @@
   .circle-hero video{position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover;}
   .circle-hero .hero-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(0deg, rgba(15,20,36,.8) 0%, rgba(15,20,36,.25) 55%, rgba(15,20,36,.1) 100%);}
   .circle-hero .wrap{position:relative; z-index:2; padding-top:90px; padding-bottom:64px;}
+  .circle-hero .chip{margin-bottom:18px;}
   .circle-hero h1{
     font-family:'Archivo', var(--sans); font-weight:400; font-size:96px; line-height:.96; letter-spacing:-.02em;
     color:var(--white); margin-bottom:20px; max-width:820px;
@@ -85,6 +86,9 @@
   .circle-btns{display:flex; flex-wrap:wrap; gap:28px;}
   .circle-btns .btn{color:var(--white); border-bottom-color:var(--white);}
   .circle-btns .btn.outline{color:var(--pink); border-bottom-color:var(--pink);}
+  .hero-credit{max-width:420px; text-align:right; margin-left:auto; margin-top:36px;}
+  .hero-credit p{font-size:11px; line-height:1.5; color:rgba(255,255,255,.55); margin-bottom:4px; white-space:nowrap;}
+  .hero-credit p:last-child{margin-bottom:0;}
 
   /* ABOUT */
   .about-course{padding:110px 0;}
@@ -176,6 +180,8 @@
     .circle-hero h1{font-size:38px;}
     .circle-hero .lede{font-size:22px;}
     .hero-quotes{min-height:170px; margin-bottom:32px;}
+    .hero-credit{max-width:none; text-align:left; margin-left:0;}
+    .hero-credit p{white-space:normal;}
     .circles-grid{grid-template-columns:1fr; gap:40px;}
     .circle-card h3{font-size:28px;}
     .instructors-grid{grid-template-columns:1fr;}
@@ -215,8 +221,9 @@
   <video autoplay muted loop playsinline src="assets/art-circle-hero.mp4"></video>
   <div class="hero-scrim"></div>
   <div class="wrap">
+    <span class="chip">You're invited</span>
     <h1>The Art Circle</h1>
-    <p class="lede">Step inside creative minds.</p>
+    <p class="lede">Step inside creative minds. Each circle is a semester built around one question — researched, discussed, and lived: through the artists and professionals behind it, and the space between the museum's galleries and its backstage.</p>
     <div class="hero-quotes">
       <div class="hero-quote active">
         <p>"Art is a lie that makes us realize truth."</p>
@@ -233,9 +240,13 @@
     </div>
     <div class="circle-btns">
       <a class="btn" href="circle-one.html">Circle One</a>
-      <a class="btn" href="circle-two.html" onclick="return openComingSoon(event,'Circle Two — The Surrealist Impulse')">Circle Two</a>
-      <a class="btn" href="circle-three.html" onclick="return openComingSoon(event,'Circle Three — The City as Medium')">Circle Three</a>
+      <a class="btn" href="circle-two.html" onclick="return openComingSoon(event,'Circle Two: The Surrealist Impulse')">Circle Two</a>
+      <a class="btn" href="circle-three.html" onclick="return openComingSoon(event,'Circle Three: The City as Medium')">Circle Three</a>
       <a class="btn outline" href="art-circle-register.html">Register &amp; FAQ</a>
+    </div>
+    <div class="hero-credit">
+      <p>A fragment from At Land, a film by Maya Deren, 1944.</p>
+      <p>An invitation to enter the space between image, movement, dream and memory.</p>
     </div>
   </div>
 </section>
@@ -246,9 +257,9 @@
       <div class="section-head">
         <h2>What The Art Circle is</h2>
       </div>
-      <p><strong>Art begins with looking, deepens through experience, and grows into a conversation with the present.</strong></p>
-      <p><strong>The Art Circle is an independent forum in Barcelona dedicated to engaging closely with contemporary art and visual culture.</strong> Each circle explores a broad theme across three monthly sessions. Each session approaches the theme from a different angle and uses a distinct methodology, combining historical context, fieldwork, direct dialogue with local practitioners, and collective discussion over shared meals.</p>
-      <p><strong>We explore how the art of our time actively shapes the way we think, see, and inhabit the world.</strong></p>
+      <p><strong>The Art Circle is an independent forum in Barcelona for looking closely at contemporary art and visual culture.</strong> Our questions move between the foundational and the urgent, from what makes something contemporary art and who decides taste, to the pressing concerns of our moment: identity, ecology, urbanism, and new forms of thought.</p>
+      <p>Each circle takes one theme and explores it across three sessions, a month apart, each through a different angle and method.</p>
+      <p>We move between historical context and fieldwork, reading and direct dialogue with local practitioners: theory tested against the real, over collective discussion and shared meals.</p>
     </div>
     <div class="about-course-video">
       <video autoplay muted loop playsinline src="assets/about-course-video.mp4"></video>
@@ -272,7 +283,7 @@
         <h3>The Surrealist Impulse</h3>
         <span class="circle-theme">From Surrealism to Hyperreality</span>
         <p>[Placeholder — a few sentences on what Circle Two covers.]</p>
-        <a class="link-arrow" href="circle-two.html" onclick="return openComingSoon(event,'Circle Two — The Surrealist Impulse')">Learn more →</a>
+        <a class="link-arrow" href="circle-two.html" onclick="return openComingSoon(event,'Circle Two: The Surrealist Impulse')">Learn more →</a>
       </div>
       <div class="circle-card">
         <span class="ribbon">Coming Soon</span>
@@ -280,7 +291,7 @@
         <h3>The City as Medium</h3>
         <span class="circle-theme">Urbanism, Social Practice, and Public Space</span>
         <p>[Placeholder — a few sentences on what Circle Three covers.]</p>
-        <a class="link-arrow" href="circle-three.html" onclick="return openComingSoon(event,'Circle Three — The City as Medium')">Learn more →</a>
+        <a class="link-arrow" href="circle-three.html" onclick="return openComingSoon(event,'Circle Three: The City as Medium')">Learn more →</a>
       </div>
     </div>
   </div>
@@ -295,7 +306,7 @@
       <div class="instructor-card">
         <h3>Vera Korman</h3>
         <span class="instructor-role">Artist &amp; Researcher</span>
-        <p>Artist, curator, and educator — she lectures, curates exhibitions, and designs independent educational programs, philosophical walking tours, and specialized workshops for universities, cultural institutions, and audiences worldwide.</p>
+        <p>Artist, curator, and educator: she lectures, curates exhibitions, and designs independent educational programs, philosophical walking tours, and specialized workshops for universities, cultural institutions, and audiences worldwide.</p>
         <a class="link-arrow" href="index.html#about">More about Vera →</a>
       </div>
       <div class="instructor-card">
