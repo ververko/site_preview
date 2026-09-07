@@ -82,24 +82,32 @@
   .hero-credit p:last-child{margin-bottom:0;}
 
   /* ABOUT */
-  .about-course{padding:110px 0;}
-  .about-course-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:64px; align-items:start;}
+  .about-course{position:relative; padding:110px 0; overflow:hidden;}
+  .about-course-text{
+    max-width:560px;
+    padding-left:max(48px, calc((100vw - 1200px) / 2 + 48px));
+    padding-right:64px;
+  }
   .about-course .section-head{margin-bottom:20px;}
-  .about-course .chip{color:var(--green); margin-bottom:14px;}
-  .about-course h2{font-size:38px; color:var(--navy);}
-  .about-course p{font-size:19px; line-height:1.65; color:var(--navy-soft); margin-top:22px;}
+  .about-course .chip{color:var(--pink); margin-bottom:14px;}
+  .about-course h2{
+    font-family:'Archivo', var(--sans); font-size:17px; font-weight:500; font-style:italic;
+    letter-spacing:.01em; text-transform:uppercase; color:var(--pink);
+  }
+  .about-course p{font-size:16px; line-height:1.65; color:var(--navy-soft); margin-top:22px; text-align:justify;}
+  .about-course p strong{color:var(--navy); font-weight:700;}
   .about-course .method-list{list-style:none; margin:22px 0 0 0; padding:0;}
   .about-course .method-list li{
-    font-size:19px; line-height:1.65; color:var(--navy-soft); margin-bottom:16px; padding-left:22px; position:relative;
+    font-size:16px; line-height:1.65; color:var(--navy-soft); margin-bottom:4px; padding-left:22px; position:relative; text-align:justify;
   }
   .about-course .method-list li:last-child{margin-bottom:0;}
   .about-course .method-list li::before{
-    content:''; position:absolute; left:0; top:11px; width:7px; height:7px; border-radius:50%; background:var(--pink);
+    content:''; position:absolute; left:0; top:9px; width:7px; height:7px; border-radius:50%; background:var(--pink);
   }
   .about-course .method-list strong{color:var(--navy);}
   .about-course-video{
-    position:sticky; top:100px; width:100%; aspect-ratio:9/16; max-height:640px;
-    border-radius:12px; overflow:hidden; background:var(--navy);
+    position:absolute; top:0; right:0; bottom:0; width:44%;
+    overflow:hidden; background:var(--navy);
   }
   .about-course-video video{width:100%; height:100%; object-fit:cover;}
   .placeholder-note{
@@ -184,9 +192,10 @@
     .circles-grid{grid-template-columns:1fr; gap:40px;}
     .circle-card h3{font-size:28px;}
     .instructors-grid{grid-template-columns:1fr;}
-    .about-course-grid{grid-template-columns:1fr; gap:32px;}
-    .about-course-video{position:static; max-height:420px; margin-top:20px;}
-    .about-course h2, .closing h2{font-size:28px;}
+    .about-course{overflow:visible;}
+    .about-course-text{max-width:none; padding-left:24px; padding-right:24px;}
+    .about-course-video{position:static; width:100%; aspect-ratio:4/3; margin-top:24px;}
+    .closing h2{font-size:28px;}
     .instructors .chip{font-size:24px;}
     .footer-grid{grid-template-columns:1fr; gap:36px;}
     .nav-toggle{display:flex;}
@@ -235,23 +244,21 @@
 </section>
 
 <section class="about-course">
-  <div class="wrap about-course-grid">
-    <div>
-      <div class="section-head">
-        <h2>What The Art Circle is</h2>
-      </div>
-      <p><strong>The Art Circle is an independent forum in Barcelona for looking closely at contemporary art and visual culture.</strong> Moving between the foundational and the urgent, our inquiries touch upon the pressing concerns of our moment: from identity and ecology to urbanism and new forms of thought.</p>
-      <p>Each circle is a study circle: a single central question explored across three dedicated sessions, each offering a distinct methodology and conceptual lens:</p>
-      <ul class="method-list">
-        <li><strong>Theoretical Frameworks &amp; History:</strong> Unpacking the concepts, research, and historical milestones that shaped the topic.</li>
-        <li><strong>Conversations with Practitioners:</strong> Direct, intimate encounters with curators, collectors, and artists actively working in the field.</li>
-        <li><strong>Fieldwork &amp; Backstage Access:</strong> Stepping beyond gallery walls into the backstage spaces where art history and critical decisions are made.</li>
-      </ul>
-      <p>Designed for curious minds, art lovers, and thinkers, The Art Circle offers a space for sustained critical inquiry and shared aesthetic experience.</p>
+  <div class="about-course-text">
+    <div class="section-head">
+      <h2>What The Art Circle is</h2>
     </div>
-    <div class="about-course-video">
-      <video autoplay muted loop playsinline src="assets/about-course-video.mp4"></video>
-    </div>
+    <p><strong>The Art Circle is an independent forum in Barcelona for looking closely at contemporary art and visual culture.</strong> Moving between the foundational and the urgent, our inquiries touch upon the pressing concerns of our moment: identity and migration, tradition and hyperreality, ecology and environment, the city and its influence.</p>
+    <p>Each circle is a study circle, built around one question or theme, explored across three dedicated sessions, each with its own methodology and conceptual lens. Every session is an experience in its own right: a place where conversation, close looking, and encounter carry as much weight as theory.</p>
+    <ul class="method-list">
+      <li><strong>Theoretical Frameworks &amp; History:</strong> Unpacking the concepts, research, and historical milestones that shaped the topic.</li>
+      <li><strong>Conversations with Practitioners:</strong> Direct, intimate encounters with curators, collectors, and artists actively working in the field.</li>
+      <li><strong>Fieldwork &amp; Backstage Access:</strong> Stepping beyond gallery walls into the backstage spaces where art history and critical decisions are made.</li>
+    </ul>
+    <p>Designed for curious minds, art lovers, and thinkers, The Art Circle offers a space for sustained critical inquiry and shared aesthetic experience.</p>
+  </div>
+  <div class="about-course-video">
+    <video autoplay muted loop playsinline src="assets/art-circle-about.mp4"></video>
   </div>
 </section>
 
