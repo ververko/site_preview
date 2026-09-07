@@ -69,21 +69,7 @@
     font-family:'Archivo', var(--sans); font-style:italic; font-weight:400; font-size:32px;
     color:var(--pink); max-width:680px; margin-bottom:36px;
   }
-  .hero-quotes{position:relative; max-width:640px; min-height:140px; margin-bottom:44px;}
-  .hero-quote{
-    position:absolute; top:0; left:0; right:0; border-left:1px solid rgba(255,255,255,.3); padding-left:18px;
-    opacity:0; transition:opacity 1.1s ease;
-  }
-  .hero-quote.active{opacity:1;}
-  .hero-quote p{
-    font-family:var(--serif); font-style:italic; font-weight:300; font-size:17px; line-height:1.55;
-    color:rgba(255,255,255,.92); margin-bottom:10px;
-  }
-  .hero-quote span{
-    font-family:'Archivo', var(--sans); font-size:12px; font-weight:500; letter-spacing:.03em;
-    text-transform:uppercase; color:rgba(255,255,255,.55);
-  }
-  .circle-btns{display:flex; flex-wrap:wrap; align-items:center; gap:28px;}
+  .circle-btns{display:flex; flex-wrap:wrap; align-items:center; gap:28px; margin-top:36px;}
   .circle-btns .btn{color:var(--white); border-bottom-color:var(--white);}
   .circle-btns .btn.outline{color:var(--pink); border-bottom-color:var(--pink);}
   .circle-btns .btn.primary{
@@ -102,6 +88,15 @@
   .about-course .chip{color:var(--green); margin-bottom:14px;}
   .about-course h2{font-size:38px; color:var(--navy);}
   .about-course p{font-size:19px; line-height:1.65; color:var(--navy-soft); margin-top:22px;}
+  .about-course .method-list{list-style:none; margin:22px 0 0 0; padding:0;}
+  .about-course .method-list li{
+    font-size:19px; line-height:1.65; color:var(--navy-soft); margin-bottom:16px; padding-left:22px; position:relative;
+  }
+  .about-course .method-list li:last-child{margin-bottom:0;}
+  .about-course .method-list li::before{
+    content:''; position:absolute; left:0; top:11px; width:7px; height:7px; border-radius:50%; background:var(--pink);
+  }
+  .about-course .method-list strong{color:var(--navy);}
   .about-course-video{
     position:sticky; top:100px; width:100%; aspect-ratio:9/16; max-height:640px;
     border-radius:12px; overflow:hidden; background:var(--navy);
@@ -184,7 +179,6 @@
     .wrap{padding:0 24px;}
     .circle-hero h1{font-size:38px;}
     .circle-hero .lede{font-size:22px;}
-    .hero-quotes{min-height:170px; margin-bottom:32px;}
     .hero-credit{max-width:none; text-align:left; margin-left:0;}
     .hero-credit p{white-space:normal;}
     .circles-grid{grid-template-columns:1fr; gap:40px;}
@@ -226,23 +220,9 @@
   <video autoplay muted loop playsinline src="assets/art-circle-hero.mp4"></video>
   <div class="hero-scrim"></div>
   <div class="wrap">
-    <span class="chip">You're invited</span>
+    <span class="chip">Step inside creative minds and join</span>
     <h1>The Art Circle</h1>
-    <p class="lede">Step inside creative minds. Each circle is a semester built around one question, researched, discussed, and experienced firsthand: through the artists and professionals behind it, and the space between the museum's galleries and its backstage.</p>
-    <div class="hero-quotes">
-      <div class="hero-quote active">
-        <p>"Art is a lie that makes us realize truth."</p>
-        <span>Pablo Picasso, 1923</span>
-      </div>
-      <div class="hero-quote">
-        <p>"The work itself has a complete circle of meaning and counterpoint. And without your involvement as a viewer, there is no story."</p>
-        <span>Anish Kapoor</span>
-      </div>
-      <div class="hero-quote">
-        <p>"Esthetic experience is experience in its integrity."</p>
-        <span>John Dewey, Art as Experience, 1934</span>
-      </div>
-    </div>
+    <p class="lede">We gather around the central questions of contemporary art, exploring them through theory and firsthand encounters in the field.</p>
     <div class="circle-btns">
       <a class="btn primary" href="circle-one.html">Register for Circle One</a>
       <a class="btn outline" href="art-circle-register.html">FAQ</a>
@@ -260,9 +240,14 @@
       <div class="section-head">
         <h2>What The Art Circle is</h2>
       </div>
-      <p><strong>The Art Circle is an independent forum in Barcelona for looking closely at contemporary art and visual culture.</strong> Our questions move between the foundational and the urgent, from what makes something contemporary art and who decides taste, to the pressing concerns of our moment: identity, ecology, urbanism, and new forms of thought.</p>
-      <p>Each circle takes one theme and explores it across three sessions, a month apart, each through a different angle and method.</p>
-      <p>Each question is examined in depth through a different methodology and a distinct conceptual lens: through encounters with curators, collectors, and artists, through fields of knowledge and research of contemporary art, and through the historical milestones that shaped it. We move through the museum's galleries as well as its backstage, where these questions are actually decided.</p>
+      <p><strong>The Art Circle is an independent forum in Barcelona for looking closely at contemporary art and visual culture.</strong> Moving between the foundational and the urgent, our inquiries touch upon the pressing concerns of our moment: from identity and ecology to urbanism and new forms of thought.</p>
+      <p>Each circle is a study circle: a single central question explored across three dedicated sessions, each offering a distinct methodology and conceptual lens:</p>
+      <ul class="method-list">
+        <li><strong>Theoretical Frameworks &amp; History:</strong> Unpacking the concepts, research, and historical milestones that shaped the topic.</li>
+        <li><strong>Conversations with Practitioners:</strong> Direct, intimate encounters with curators, collectors, and artists actively working in the field.</li>
+        <li><strong>Fieldwork &amp; Backstage Access:</strong> Stepping beyond gallery walls into the backstage spaces where art history and critical decisions are made.</li>
+      </ul>
+      <p>Designed for curious minds, art lovers, and thinkers, The Art Circle offers a space for sustained critical inquiry and shared aesthetic experience.</p>
     </div>
     <div class="about-course-video">
       <video autoplay muted loop playsinline src="assets/about-course-video.mp4"></video>
@@ -376,18 +361,6 @@
     btn.classList.toggle('open');
     document.querySelector('.navlinks').classList.toggle('open');
   }
-
-  (function(){
-    var quotes = document.querySelectorAll('.hero-quote');
-    if(quotes.length > 1){
-      var idx = 0;
-      setInterval(function(){
-        quotes[idx].classList.remove('active');
-        idx = (idx + 1) % quotes.length;
-        quotes[idx].classList.add('active');
-      }, 5500);
-    }
-  })();
 </script>
 
 </body>
