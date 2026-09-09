@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Writing — Vera Korman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,7 +110,7 @@
   <div class="page-head">
     <span class="kicker">Writing</span>
     <h1>Notes &amp; essays</h1>
-    <p>Reflections on art, curating, and the city — updated whenever there's something worth writing down.</p>
+    <p>Reflections on art, curating, and the city, updated whenever there's something worth writing down.</p>
   </div>
 
   <div class="feed" id="feed"></div>
@@ -214,7 +215,7 @@
   const feed = document.getElementById('feed');
 
   if (typeof POSTS === 'undefined' || POSTS.length === 0) {
-    feed.innerHTML = '<p class="empty">Nothing published yet — check back soon.</p>';
+    feed.innerHTML = '<p class="empty">Nothing published yet, check back soon.</p>';
   } else {
     feed.innerHTML = POSTS.map(post => `
       <article class="post">
