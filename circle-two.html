@@ -95,6 +95,14 @@
   .closing .chip{color:var(--pink); margin-bottom:14px;}
   .closing h2{font-size:36px; max-width:600px; margin:0 auto 32px auto; color:var(--white);}
   .closing .btn{color:var(--white); border-bottom-color:var(--white);}
+  .closing .btn.primary{
+    background:var(--circle-color); color:var(--white); border-bottom:none; border-radius:999px;
+    padding:14px 28px; font-weight:600;
+  }
+  .closing .btn.primary:hover{opacity:.85;}
+  .closing .faq-note{display:block; margin-top:22px; font-size:14px; color:#B7BFD6;}
+  .closing .faq-note a{color:var(--white); border-bottom:1px solid rgba(255,255,255,.5);}
+  .closing .faq-note a:hover{opacity:.7;}
 
   footer{background:var(--navy); color:#B7BFD6; padding:70px 0 40px 0; font-size:14px; border-top:1px solid #2C3554;}
   .footer-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:60px; padding-bottom:50px; border-bottom:1px solid #2C3554;}
@@ -143,7 +151,7 @@
     <a class="btn small outline" href="the-art-circle.html">← Overview</a>
     <a class="btn small outline" href="circle-one.html">Circle One</a>
     <a class="btn small outline" href="circle-three.html" onclick="return openComingSoon(event,'Circle Three: The City as Medium')">Circle Three</a>
-    <a class="btn small outline" href="art-circle-register.html">Register &amp; FAQ</a>
+    <a class="btn small outline" href="art-circle-register.html">Register</a>
   </div>
 </section>
 
@@ -169,8 +177,9 @@
 <section class="closing">
   <div class="wrap">
     <span class="chip">Interested?</span>
-    <h2>Questions about Circle Two, or ready to register?</h2>
-    <a class="btn" href="art-circle-register.html">Register &amp; FAQ →</a>
+    <h2>Ready to register for Circle Two?</h2>
+    <a class="btn primary" href="art-circle-register.html">Register for Circle Two →</a>
+    <span class="faq-note">Have questions? <a href="art-circle-register.html#faq">See the FAQ →</a></span>
   </div>
 </section>
 
