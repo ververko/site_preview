@@ -58,11 +58,20 @@
 
   .register-cta{
     background:#F7F8FB; border-radius:16px; padding:48px; margin-bottom:90px;
-    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:8px;
   }
-  .register-cta h2{font-size:24px; color:var(--navy); margin-bottom:8px;}
-  .register-cta p{font-size:15.5px; color:var(--navy-soft);}
-  .register-cta .btn{color:var(--green); border-bottom-color:var(--green); flex-shrink:0;}
+  .register-cta h2{font-size:26px; color:var(--navy); margin-bottom:4px;}
+  .register-price{font-family:var(--serif); font-size:40px; font-weight:700; color:var(--circle-color); margin:12px 0 22px;}
+  .register-price span{font-family:var(--sans); font-size:15px; font-weight:400; color:var(--navy-soft); margin-left:8px;}
+  .includes-list{list-style:none; margin:0 0 24px; padding:0; width:100%; max-width:520px;}
+  .includes-list li{font-size:15.5px; color:var(--navy-soft); padding:12px 0; border-top:1px solid #E7E9F0;}
+  .includes-list li:first-child{border-top:none;}
+  .register-note{font-size:14.5px; color:var(--navy-soft); margin-bottom:10px; max-width:520px;}
+  .btn.primary{
+    display:inline-flex; background:var(--circle-color); color:var(--white); border-bottom:none; border-radius:999px;
+    padding:16px 32px; font-weight:600; font-size:17px; margin-top:14px; transition:opacity .16s ease;
+  }
+  .btn.primary:hover{opacity:.85;}
 
   .faq{padding-bottom:100px;}
   .faq .section-head{margin-bottom:40px;}
@@ -119,22 +128,26 @@
 <section class="wrap page-head">
   <span class="kicker">The Art Circle</span>
   <h1>Register &amp; FAQ</h1>
-  <p>[Placeholder — one or two sentences on how registration works: open enrollment, deadlines, interviews, etc.]</p>
+  <p>Circle One is now open for registration. Spots are limited to keep the group small and personal.</p>
   <div class="circle-links">
     <a class="btn small outline" href="the-art-circle.html">← Overview</a>
     <a class="btn small outline" href="circle-one.html">Circle One</a>
-    <a class="btn small outline" href="circle-two.html">Circle Two</a>
-    <a class="btn small outline" href="circle-three.html">Circle Three</a>
   </div>
 </section>
 
 <div class="wrap">
   <div class="register-cta">
-    <div>
-      <h2>Ready to join?</h2>
-      <p>[Placeholder — a line encouraging registration, or instructions for how to apply.]</p>
-    </div>
-    <a class="btn" href="mailto:verakorman@gmail.com?subject=The%20Art%20Circle%20—%20Registration">Register Your Interest →</a>
+    <h2>Circle One — The Art Question</h2>
+    <p class="register-price">€300 <span>for all three sessions</span></p>
+    <ul class="includes-list">
+      <li>Three sessions over three months</li>
+      <li>Buffet and breakfast at each gathering</li>
+      <li>Museum and exhibition entries</li>
+      <li>Lectures and meetings with art-world professionals</li>
+    </ul>
+    <p class="register-note">After you register, you'll receive the full, detailed program for each session by email.</p>
+    <p class="register-note">Cancellations made before the first session are refunded in full. Once the Circle has begun, registrations are non-refundable, though your place can be transferred to someone else.</p>
+    <a class="btn primary" href="https://buy.stripe.com/3cI4gz2Sufvjc9n4yP57W01" target="_blank" rel="noopener">Register &amp; Pay — €300 →</a>
   </div>
 </div>
 
