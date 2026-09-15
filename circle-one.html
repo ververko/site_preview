@@ -47,7 +47,6 @@
 
   .btn.outline{color:var(--circle-color); border-bottom-color:var(--circle-color);}
   .btn.small{font-size:13px;}
-  .circle-links{display:flex; flex-wrap:wrap; gap:24px; margin-top:26px;}
 
   .page-head{padding:90px 0 60px 0;}
   .page-head .circle-num{
@@ -100,20 +99,6 @@
     background:#F4F1FE; border:1px dashed var(--violet); border-radius:8px; padding:10px 16px;
   }
 
-  .coming-soon-overlay{
-    display:none; position:fixed; inset:0; z-index:200; background:rgba(15,20,36,.75);
-    align-items:center; justify-content:center; padding:24px;
-  }
-  .coming-soon-overlay.active{display:flex;}
-  .coming-soon-box{background:var(--white); border-radius:16px; padding:48px 40px; max-width:420px; text-align:center; position:relative;}
-  .coming-soon-box h3{font-family:var(--serif); font-weight:600; font-style:normal; font-size:24px; color:var(--navy); margin-bottom:12px;}
-  .coming-soon-box p{font-size:15.5px; color:var(--navy-soft); line-height:1.6;}
-  .coming-soon-box .close-btn{
-    position:absolute; top:14px; right:18px; font-size:24px; color:var(--navy-soft);
-    cursor:pointer; line-height:1; background:none; border:none; font-family:var(--sans);
-  }
-  .coming-soon-box .close-btn:hover{color:var(--navy);}
-
   .circle-nav-footer{
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
     padding:40px 0; border-top:1px solid #E7E9F0; margin-top:20px;
@@ -125,11 +110,13 @@
   .closing .chip{color:var(--pink); margin-bottom:14px;}
   .closing h2{font-size:36px; max-width:600px; margin:0 auto 32px auto; color:var(--white);}
   .closing .btn{color:var(--white); border-bottom-color:var(--white);}
-  .closing .btn.primary{
-    background:var(--circle-color); color:var(--white); border-bottom:none; border-radius:999px;
+  .btn.primary{
+    display:inline-flex; background:var(--circle-color); color:var(--white); border-bottom:none; border-radius:999px;
     padding:14px 28px; font-weight:600;
   }
-  .closing .btn.primary:hover{opacity:.85;}
+  .btn.primary:hover{opacity:.85;}
+  .video-col{display:flex; flex-direction:column;}
+  .video-col .btn.primary{margin-top:20px; align-self:flex-start;}
   .closing .faq-note{display:block; margin-top:22px; font-size:14px; color:#B7BFD6;}
   .closing .faq-note a{color:var(--white); border-bottom:1px solid rgba(255,255,255,.5);}
   .closing .faq-note a:hover{opacity:.7;}
@@ -191,11 +178,14 @@
     <p>Across three encounters, we test these ideas against real examples: exploring landmark artworks, stepping into museum archives, and engaging in direct conversation with the curators shaping Barcelona's art scene today.</p>
     <p>The Politics of Taste is an invitation to step behind the scenes and discover how taste and value are really made.</p>
   </div>
-  <a class="circle-video" href="https://www.youtube.com/watch?v=NaK74hJXbR4" target="_blank" rel="noopener">
-    <img src="https://img.youtube.com/vi/NaK74hJXbR4/maxresdefault.jpg" alt="The Banana That Broke the Internet: Maurizio Cattelan's Comedian Heads to Auction at Sotheby's">
-    <span class="play-btn">▶</span>
-    <span class="video-caption">The Banana That Broke the Internet: Maurizio Cattelan's "Comedian" at Sotheby's</span>
-  </a>
+  <div class="video-col">
+    <a class="circle-video" href="https://www.youtube.com/watch?v=NaK74hJXbR4" target="_blank" rel="noopener">
+      <img src="https://img.youtube.com/vi/NaK74hJXbR4/maxresdefault.jpg" alt="The Banana That Broke the Internet: Maurizio Cattelan's Comedian Heads to Auction at Sotheby's">
+      <span class="play-btn">▶</span>
+      <span class="video-caption">The Banana That Broke the Internet: Maurizio Cattelan's "Comedian" at Sotheby's</span>
+    </a>
+    <a class="btn primary" href="art-circle-register.html">Register for Circle One →</a>
+  </div>
 </section>
 
 <section class="wrap content-block">
@@ -206,9 +196,7 @@
 <div class="wrap">
   <div class="circle-nav-footer">
     <a href="the-art-circle.html">← Overview</a>
-    <a href="circle-two.html" onclick="return openComingSoon(event,'Circle Two: The Surrealist Impulse')">Circle Two</a>
-    <a href="circle-three.html" onclick="return openComingSoon(event,'Circle Three: The City as Medium')">Circle Three</a>
-    <a href="art-circle-register.html">Register</a>
+    <a href="art-circle-register.html#faq">Questions? See the FAQ →</a>
   </div>
 </div>
 
@@ -245,24 +233,7 @@
   </div>
 </footer>
 
-<div class="coming-soon-overlay" id="comingSoonOverlay" onclick="if(event.target===this) closeComingSoon()">
-  <div class="coming-soon-box">
-    <button class="close-btn" onclick="closeComingSoon()" aria-label="Close">&times;</button>
-    <h3><span id="comingSoonName">This circle</span></h3>
-    <p>This page will open soon. In the meantime, register your interest to be the first to know when it's ready.</p>
-  </div>
-</div>
 <script>
-  function openComingSoon(e, name){
-    e.preventDefault();
-    document.getElementById('comingSoonName').textContent = name;
-    document.getElementById('comingSoonOverlay').classList.add('active');
-    return false;
-  }
-  function closeComingSoon(){
-    document.getElementById('comingSoonOverlay').classList.remove('active');
-  }
-
   function toggleMobileNav(btn){
     btn.classList.toggle('open');
     document.querySelector('.navlinks').classList.toggle('open');
