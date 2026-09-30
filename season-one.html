@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Season One — Artemis — Vera Korman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400..900;1,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12182B; --navy-soft:#4A5570; --white:#FFFFFF;
+    --pink:#FF3D7F; --cobalt:#3654FF; --green:#1FAE6E; --violet:#8B5CF6;
+    --circle-color:var(--pink);
+    --serif:'Archivo', 'Work Sans', sans-serif;
+    --sans:'Work Sans', Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans); color:var(--navy); background:var(--white); font-weight:400; line-height:1.6; overflow-x:hidden;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1200px; margin:0 auto; padding:0 48px;}
+  h1,h2,h3{font-family:var(--serif); font-weight:600; letter-spacing:-.01em; line-height:1.05;}
+  .chip{
+    display:block; font-family:'Archivo', var(--sans); font-size:17px; font-weight:500; font-style:italic;
+    letter-spacing:.01em; text-transform:uppercase; color:var(--pink);
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; font-family:'Archivo', var(--sans); font-weight:400;
+    font-size:16px; color:var(--navy); border-bottom:1px solid var(--navy); padding-bottom:4px;
+    transition:opacity .16s ease;
+  }
+  .btn:hover{opacity:.55;}
+  .link-arrow{font-family:'Archivo', var(--sans); font-size:15px; font-weight:400; border-bottom:1px solid currentColor; padding-bottom:3px;}
+
+  header{background:var(--navy); position:sticky; top:0; z-index:50;}
+  nav.wrap{display:flex; align-items:center; justify-content:flex-end; padding-top:22px; padding-bottom:22px;}
+  .navlinks{display:flex; align-items:center; gap:36px; font-size:14px; font-weight:500; color:var(--white);}
+  .navlinks a:hover{color:var(--pink);}
+  .navlinks .nav-cta{color:var(--pink); border-bottom:1px solid var(--pink); padding-bottom:3px;}
+  .nav-toggle{display:none; flex-direction:column; justify-content:center; gap:5px; background:none; border:none; cursor:pointer; padding:8px; margin-left:20px;}
+  .nav-toggle span{display:block; width:24px; height:2px; background:var(--white); transition:transform .2s ease, opacity .2s ease;}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .btn.outline{color:var(--circle-color); border-bottom-color:var(--circle-color);}
+  .btn.small{font-size:13px;}
+
+  .page-head{padding:90px 0 60px 0;}
+  .page-head .circle-num{
+    width:56px; height:56px; border-radius:50%; background:var(--circle-color); color:var(--white);
+    display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:700; font-size:24px;
+    margin-bottom:22px;
+  }
+  .page-head .kicker{
+    display:block; font-family:'Archivo', var(--sans); font-size:17px; font-weight:500; font-style:italic;
+    letter-spacing:.01em; text-transform:uppercase; color:var(--circle-color); margin-bottom:10px;
+  }
+  .page-head h1{font-size:52px; color:var(--navy); margin-bottom:18px; max-width:720px;}
+  .page-head p{font-size:19px; color:var(--navy-soft); max-width:620px;}
+
+  .content-block{padding:0 0 70px 0;}
+  .content-block h2{font-size:26px; color:var(--navy); margin-bottom:16px;}
+  .content-block p{font-size:17px; line-height:1.65; color:var(--navy-soft); max-width:680px; margin-bottom:14px;}
+  .content-text p strong{font-family:var(--serif); font-weight:400; color:var(--navy);}
+  .content-text p.lens strong{color:var(--circle-color);}
+  .content-text p:first-child strong{font-size:21px; letter-spacing:-.005em;}
+  .page-head .subtitle{
+    display:block; font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:26px; color:var(--circle-color); margin-bottom:18px;
+  }
+  .theme-list{max-width:680px; margin-top:8px;}
+  .theme-item{display:flex; gap:22px; padding:22px 0; border-top:1px solid #E7E9F0;}
+  .theme-item:last-child{border-bottom:1px solid #E7E9F0;}
+  .theme-term{
+    font-family:var(--serif); font-weight:700; font-size:19px; color:var(--circle-color);
+    flex:0 0 90px;
+  }
+  .theme-item p{font-size:17px; line-height:1.5; color:var(--navy-soft); margin-bottom:0;}
+  .content-block .lede{font-size:18px; line-height:1.6; color:var(--navy); max-width:680px; margin-top:26px;}
+  .content-with-video{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;}
+  .content-with-video .content-text p{max-width:none;}
+  .circle-video{position:relative; display:block; width:100%; max-width:none; aspect-ratio:16/9; border-radius:12px; overflow:hidden; margin-top:8px; background:var(--navy);}
+  .circle-video img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s ease;}
+  .circle-video:hover img{transform:scale(1.03);}
+  .circle-video .play-btn{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:68px; height:68px; border-radius:50%; background:var(--pink); color:var(--white);
+    display:flex; align-items:center; justify-content:center; font-size:22px;
+  }
+  .circle-video .video-caption{
+    position:absolute; left:0; right:0; bottom:0; padding:16px 20px; font-size:14px; color:var(--white);
+    background:linear-gradient(transparent, rgba(18,24,43,.85));
+  }
+  .placeholder-note{
+    display:inline-block; margin-top:6px; font-size:13px; font-weight:600; color:var(--violet);
+    background:#F4F1FE; border:1px dashed var(--violet); border-radius:8px; padding:10px 16px;
+  }
+
+  .circle-nav-footer{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+    padding:40px 0; border-top:1px solid #E7E9F0; margin-top:20px;
+  }
+  .circle-nav-footer a{font-size:14px; font-weight:600; color:var(--navy);}
+  .circle-nav-footer a:hover{color:var(--circle-color);}
+
+  .closing{padding:100px 0; text-align:center; background:var(--navy); color:var(--white);}
+  .closing .chip{color:var(--pink); margin-bottom:14px;}
+  .closing h2{font-size:36px; max-width:600px; margin:0 auto 32px auto; color:var(--white);}
+  .closing .btn{color:var(--white); border-bottom-color:var(--white);}
+  .btn.primary{
+    display:inline-flex; align-items:center; gap:10px; background:var(--circle-color); color:var(--white);
+    border-bottom:none; border-radius:999px; padding:14px 28px; font-weight:600;
+  }
+  .btn.primary:hover{opacity:.85;}
+  .content-text .btn.primary{margin-top:8px;}
+  .pulse-dot{
+    width:8px; height:8px; border-radius:50%; background:var(--white); flex-shrink:0;
+    animation:pulse-dot 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse-dot{
+    0%{transform:scale(1); box-shadow:0 0 0 0 rgba(255,255,255,.6);}
+    70%{transform:scale(1.15); box-shadow:0 0 0 7px rgba(255,255,255,0);}
+    100%{transform:scale(1); box-shadow:0 0 0 0 rgba(255,255,255,0);}
+  }
+  .video-col{display:flex; flex-direction:column;}
+
+  footer{background:var(--navy); color:#B7BFD6; padding:70px 0 40px 0; font-size:14px; border-top:1px solid #2C3554;}
+  .footer-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:60px; padding-bottom:50px; border-bottom:1px solid #2C3554;}
+  footer h4{font-family:var(--serif); color:var(--pink); font-weight:700; font-size:20px; margin-bottom:18px;}
+  footer .logo{color:var(--white); margin-bottom:16px; display:block; font-family:var(--serif); font-weight:700; font-size:26px;}
+  footer a:hover{color:var(--pink);}
+  footer p{margin-bottom:10px; line-height:1.8;}
+  .foot-bottom{padding-top:30px; display:flex; justify-content:space-between; opacity:.65; font-size:12px; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:880px){
+    .wrap{padding:0 24px;}
+    .page-head h1{font-size:34px;}
+    .content-with-video{grid-template-columns:1fr;}
+    .content-with-video .circle-video{max-width:100%; margin-top:20px;}
+    .nav-toggle{display:flex;}
+    .navlinks{
+      display:none; position:absolute; top:100%; left:0; right:0; background:var(--navy);
+      flex-direction:column; align-items:flex-start; gap:0; padding:10px 24px 24px;
+    }
+    .navlinks.open{display:flex;}
+    .navlinks a{width:100%; padding:14px 0; border-top:1px solid rgba(255,255,255,.12);}
+    .footer-grid{grid-template-columns:1fr; gap:36px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap" style="justify-content:flex-end;">
+    <button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav(this)"><span></span><span></span><span></span></button>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#programs">Areas of Practice</a>
+      <a href="writing.html">Writing</a>
+      <a href="artemis.html">Artemis</a>
+      <a class="nav-cta" href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="wrap page-head">
+  <span class="kicker">Season 1</span>
+  <h1>The Art Question</h1>
+  <span class="subtitle">The Politics of Taste</span>
+  <p>What is art, and who gets to decide?</p>
+</section>
+
+<section class="wrap content-block content-with-video">
+  <div class="content-text">
+    <p><strong>Our first Season follows how artistic value is made: from the moment a ready-made was first declared art, to the museums and markets that decide what we see and remember today.</strong></p>
+    <p>We begin our very first session in a warm, welcoming gathering, where we will meet these questions in person, not just in theory. Over three sessions, we look at the art world from three angles:</p>
+    <p class="lens"><strong>The Artistic Gesture:</strong> How artists push past the rules of what art can be, and what happens the moment a radical idea gets absorbed into the market.</p>
+    <p class="lens"><strong>The Museum &amp; The Market:</strong> How museum purchases, private collections, and archival decisions shape what gets remembered, and what stays in the vaults.</p>
+    <p class="lens"><strong>The Curator's Eye:</strong> How the way art is displayed shapes what it means, guiding what we notice and what we miss.</p>
+    <p>Across three encounters, we test these ideas against real examples: exploring landmark artworks, stepping into museum archives, and engaging in direct conversation with the curators shaping Barcelona's art scene today.</p>
+    <p>The Politics of Taste is an invitation to step behind the scenes and discover how taste and value are really made. The season unfolds across three sessions over three months, two to three hours each, held in person.</p>
+    <a class="btn primary" href="artemis-register.html"><span class="pulse-dot"></span>Register for Season One →</a>
+  </div>
+  <div class="video-col">
+    <a class="circle-video" href="https://www.youtube.com/watch?v=NaK74hJXbR4" target="_blank" rel="noopener">
+      <img src="https://img.youtube.com/vi/NaK74hJXbR4/maxresdefault.jpg" alt="The Banana That Broke the Internet: Maurizio Cattelan's Comedian Heads to Auction at Sotheby's">
+      <span class="play-btn">▶</span>
+      <span class="video-caption">The Banana That Broke the Internet: Maurizio Cattelan's "Comedian" at Sotheby's</span>
+    </a>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="circle-nav-footer">
+    <a href="artemis.html">← Overview</a>
+    <a href="artemis-register.html#faq">Questions? See the FAQ →</a>
+  </div>
+</div>
+
+<section class="closing">
+  <div class="wrap">
+    <span class="chip">Questions?</span>
+    <h2>Have a question before you register?</h2>
+    <a class="btn outline" href="artemis-register.html#faq">See the FAQ →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="logo">VERA KORMAN</span>
+        <p>Artist, Researcher, Educator &amp; Curator<br>Barcelona, Spain</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:verakorman@gmail.com">verakorman@gmail.com</a></p>
+        <p><a href="tel:+34650572178">+34 650 572 178</a></p>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <p><a href="index.html">← Back to the main site</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom wrap" style="padding-left:0; padding-right:0;">
+      <span>© 2026 Vera Korman</span>
+      <span>English · Español</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileNav(btn){
+    btn.classList.toggle('open');
+    document.querySelector('.navlinks').classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
