@@ -83,6 +83,19 @@
     display:inline-block; margin-top:10px; font-size:13px; font-weight:600; color:var(--violet);
     background:#F4F1FE; border:1px dashed var(--violet); border-radius:8px; padding:10px 16px;
   }
+  .coming-soon-overlay{
+    display:none; position:fixed; inset:0; z-index:200; background:rgba(15,20,36,.75);
+    align-items:center; justify-content:center; padding:24px;
+  }
+  .coming-soon-overlay.active{display:flex;}
+  .coming-soon-box{background:var(--white); border-radius:16px; padding:48px 40px; max-width:420px; text-align:center; position:relative;}
+  .coming-soon-box h3{font-family:var(--serif); font-weight:600; font-style:normal; font-size:24px; color:var(--navy); margin-bottom:12px;}
+  .coming-soon-box p{font-size:15.5px; color:var(--navy-soft); line-height:1.6;}
+  .coming-soon-box .close-btn{
+    position:absolute; top:14px; right:18px; font-size:24px; color:var(--navy-soft);
+    cursor:pointer; line-height:1; background:none; border:none; font-family:var(--sans);
+  }
+  .coming-soon-box .close-btn:hover{color:var(--navy);}
 
   footer{background:var(--navy); color:#B7BFD6; padding:70px 0 40px 0; font-size:14px; border-top:1px solid #2C3554;}
   .footer-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:60px; padding-bottom:50px; border-bottom:1px solid #2C3554;}
@@ -140,7 +153,7 @@
     <p class="includes-text">Three guided sessions over three months, each combining lectures, thematic discussion, shared meals, museum visits, and meetings with professionals. The exact mix varies from session to session.</p>
     <p class="register-note">After you register, you'll receive the full, detailed program for each session by email.</p>
     <p class="register-note">Registration covers all three sessions within a cycle: you cannot register for just one or two of them. Cancellations made at least 7 days before the first session are refunded in full. After that, registrations are non-refundable, but your spot can be transferred to someone else at no charge.</p>
-    <a class="btn primary" href="https://buy.stripe.com/3cI4gz2Sufvjc9n4yP57W01" target="_blank" rel="noopener">Register &amp; Pay — €300 →</a>
+    <a class="btn primary" href="https://buy.stripe.com/3cI4gz2Sufvjc9n4yP57W01" target="_blank" rel="noopener" onclick="return openRegisterSoon(event)">Register &amp; Pay — €300 →</a>
   </div>
 </div>
 
@@ -196,7 +209,22 @@
   </div>
 </footer>
 
+<div class="coming-soon-overlay" id="registerSoonOverlay" onclick="if(event.target===this) closeRegisterSoon()">
+  <div class="coming-soon-box">
+    <button class="close-btn" onclick="closeRegisterSoon()" aria-label="Close">&times;</button>
+    <h3>Registration opens very soon</h3>
+    <p>We're putting the final touches on the registration process. Check back shortly, or email <a href="mailto:verakorman@gmail.com">verakorman@gmail.com</a> if you'd like to register now.</p>
+  </div>
+</div>
 <script>
+  function openRegisterSoon(e){
+    e.preventDefault();
+    document.getElementById('registerSoonOverlay').classList.add('active');
+    return false;
+  }
+  function closeRegisterSoon(){
+    document.getElementById('registerSoonOverlay').classList.remove('active');
+  }
   function toggleMobileNav(btn){
     btn.classList.toggle('open');
     document.querySelector('.navlinks').classList.toggle('open');
