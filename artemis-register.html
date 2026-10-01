@@ -61,10 +61,16 @@
     display:flex; flex-direction:column; align-items:flex-start; gap:8px;
   }
   .register-cta h2{font-size:26px; color:var(--navy); margin-bottom:4px;}
-  .register-price{font-family:var(--serif); font-size:20px; font-weight:700; color:var(--circle-color); margin:18px 0 20px;}
+  .register-price{font-family:var(--serif); font-size:20px; font-weight:700; color:var(--circle-color); margin:0;}
   .register-price span{font-family:var(--sans); font-size:14px; font-weight:400; color:var(--navy-soft); margin-left:6px;}
   .includes-text{font-size:16px; line-height:1.65; color:var(--navy-soft); max-width:520px; margin-bottom:24px;}
   .register-note{font-size:14.5px; color:var(--navy-soft); margin-bottom:10px; max-width:520px;}
+  .register-block{margin-bottom:26px;}
+  .register-label{
+    display:block; font-family:'Archivo', var(--sans); font-size:13px; font-weight:700;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--circle-color); margin-bottom:8px;
+  }
+  .register-block p{font-size:16px; line-height:1.65; color:var(--navy-soft); max-width:520px; margin:0;}
   .btn.primary{
     display:inline-flex; background:var(--circle-color); color:var(--white); border-bottom:none; border-radius:999px;
     padding:16px 32px; font-weight:600; font-size:17px; margin-top:14px; transition:opacity .16s ease;
@@ -149,11 +155,25 @@
 <div class="wrap">
   <div class="register-cta">
     <h2>Cycle One — The Art Question</h2>
-    <p class="includes-text">Three sessions, one a month over three months, on November 4 and December 10, 2026, and January 12, 2027, each exploring the theme from a different angle: the artist's gesture, the museum and the market, and the curator's eye. Sessions run three hours, in person in Barcelona.</p>
-    <p class="includes-text">Each session draws on a different combination of formats, museum visits, private lectures, salon-style conversations, shared meals, and meetings with professionals, shaped to fit its angle. The exact format for each session is sent by email after you register, along with the full detailed program.</p>
-    <p class="register-note">Registration covers all three sessions within a cycle: you cannot register for just one or two of them. Cancellations made at least 7 days before the first session are refunded in full. After that, registrations are non-refundable, but your spot can be transferred to someone else at no charge.</p>
-    <p class="register-price">€300 <span>for all three sessions</span></p>
-    <a class="btn primary" href="https://buy.stripe.com/3cI4gz2Sufvjc9n4yP57W01" target="_blank" rel="noopener">Register &amp; Pay — €300 →</a>
+    <p class="includes-text">Three curated sessions across three months, each exploring the theme from a different angle: the artist's gesture, the museum and the market, and the curator's eye.</p>
+
+    <div class="register-block">
+      <span class="register-label">The Format</span>
+      <p>Each session takes a different shape, drawing on museum visits, private lectures, salon-style conversations, gatherings around the table, and meetings with professionals, shaped to fit its angle. The exact format for each session is sent by email after you register, along with the full program.</p>
+    </div>
+
+    <div class="register-block">
+      <span class="register-label">Dates &amp; Location</span>
+      <p>Three sessions, three hours each, in person in Barcelona: November 4 and December 10, 2026, and January 12, 2027.</p>
+    </div>
+
+    <div class="register-block">
+      <span class="register-label">Registration</span>
+      <p class="register-price">€300 <span>covers full access to all three sessions in Cycle One</span></p>
+    </div>
+
+    <a class="btn primary" href="https://buy.stripe.com/3cI4gz2Sufvjc9n4yP57W01" target="_blank" rel="noopener">Join Cycle One →</a>
+    <p class="register-note">Registrations are for the full cycle. Spots are transferable.</p>
   </div>
 </div>
 
