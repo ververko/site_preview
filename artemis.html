@@ -99,6 +99,11 @@
   .about-course p strong{
     font-family:var(--serif); font-size:19px; font-weight:400; letter-spacing:-.005em; color:var(--navy);
   }
+  .about-course .btn.primary{
+    display:inline-flex; align-items:center; margin-top:34px; padding:18px 38px; border-radius:999px; border-bottom:none;
+    background:var(--pink); color:var(--white); font-family:'Archivo', var(--sans); font-size:19px; font-weight:600;
+  }
+  .about-course .btn.primary:hover{opacity:.85;}
   .about-course .method-list{list-style:none; margin:22px 0 0 0; padding:0;}
   .about-course .method-list li{
     font-size:16px; line-height:1.65; color:var(--navy-soft); margin-bottom:12px;
@@ -260,7 +265,7 @@
       <li><strong>Around the Table:</strong> Open conversation, often over a drink or coffee, where small talk naturally turns into deeper dialogue about the work itself.</li>
     </ul>
     <p>Join one gathering, or follow the whole theme.</p>
-    <a class="link-arrow" href="the-art-question.html">Explore The Art Question →</a>
+    <a class="btn primary" href="the-art-question.html">Explore The Art Question →</a>
   </div>
   <div class="about-course-video">
     <video autoplay muted loop playsinline src="assets/art-circle-about.mp4"></video>
